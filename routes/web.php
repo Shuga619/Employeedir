@@ -32,11 +32,12 @@ Route::post('/BNBLEmployeeDirectory', 'DirectoryController@searchDirectory')->na
 
 /*
 |----------------------------------------------------------------------------------
-| Routes for Administrator
+| Routes for DOA
 |----------------------------------------------------------------------------------
 */ 
 Route::get('/DOA', 'DOAController@index')->name('doa_index_path');
-
+Route::get('/DOA/credit-vertical', 'DOAController@credit')->name('credit_doa_path');
+Route::get('/DOA/finance-vertical', 'DOAController@finance')->name('finance_doa_path');
 
 /*
 |----------------------------------------------------------------------------------
