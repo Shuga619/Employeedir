@@ -16,14 +16,14 @@
 | Routes for Users
 |----------------------------------------------------------------------------------
 */ 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-
+// Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'DirectoryController@getDirectorySearch');
 Route::get('/BNBLEmployeeDirectory', 'DirectoryController@getDirectorySearch')->name('get_search_path');
 Route::get('/BNBLEmployeeDirectory/result', 'DirectoryController@getResult')->name('result_path');
 Route::get('/BNBLEmployeeDirectory/result/{id}/show/{ename}/{location}/{department}', 'DirectoryController@getShow')->name('show_result_path');
