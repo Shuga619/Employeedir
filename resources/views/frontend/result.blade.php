@@ -34,7 +34,7 @@
           		<h1 class="mb-0"> 
             		Bhutan National Bank Limited
           		</h1>
-          		<h3 class="no-case mb-5">Search Result(s)</h3>
+          		<h2 class="no-case mb-5">Search Result(s)</h2>
           		<div class="mb-5">
           		  <section class="py-5">
                   <div class="row">
