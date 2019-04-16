@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'Saira Extra Condensed';
+  font-style: normal;
+  font-weight: 500;
+  src: url(../fonts/Saira_Extra_Condensed/SairaExtraCondensed-Bold.ttf);
+}
+body{
+	font-family: "Saira_Extra_Condensed";
+}
