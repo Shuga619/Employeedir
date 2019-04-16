@@ -40,9 +40,9 @@
 
       	<section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
         	<div class="my-auto">
-          		<h1 class="mb-0"> 
+          		<h2 class="mb-0"> 
             		{{ $record->name }}
-          		</h1>
+          		</h2>
           		<div class="subheading mb-4"><span title="Designation" data-toggle="tooltip" class="text-bnb-blue"data-placement="bottom">{{$record->designation}}</span> &nbsp; | &nbsp; <span class="text-bnb-orange"data-placement="bottom" data-toggle="tooltip" title="Job Title">{{$record->title}}</span> &nbsp; | &nbsp; <span class="text-bnb-blue"data-placement="bottom" data-toggle="tooltip" title="Department">{{$record->department->name}} Department</span></div>
 
           		<div class="social-icons">
