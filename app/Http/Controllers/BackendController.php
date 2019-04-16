@@ -36,6 +36,6 @@ class BackendController extends Controller
 
     public function bulkUploadForm(){
     	$user = Auth::user();
-    	return view('backend.bulkUpload',compact('user'));
+    	return view('backend.bulkupload',compact('user'));
     }
 }
