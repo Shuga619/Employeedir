@@ -39,7 +39,7 @@
     <div class="container-fluid p-0">
       	<section class="search-section p-3 p-lg-5 d-block d-flex d-column">
         	<div class="my-auto">
-          		<h1 class="mb-4"> 
+          		<h1 class="mb-5"> 
             		Bhutan National Bank Limited
           		</h1>
           		<h2 class="no-case mb-5">Vertical and Department wise Delegation of Authority can be viewed here. Select the Vertical from the dropdown menu.</h2>
