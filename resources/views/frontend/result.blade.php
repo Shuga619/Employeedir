@@ -31,16 +31,16 @@
     <div class="container-fluid p-0">
       	<section class="search-section p-3 p-lg-5 d-block d-flex d-column">
         	<div class="my-auto">
-          		<h2 class="mb-0"> 
+          		<h1 class="mb-0"> 
             		Bhutan National Bank Limited
-          		</h2>
+          		</h1>
           		<h3 class="no-case mb-5">Search Result(s)</h3>
           		<div class="mb-5">
           		  <section class="py-5">
                   <div class="row">
                     
                     @if($records->count() == 0)
-                      <h3 class="no-case mb-5">No Record were found matching the query.</h3>
+                      <h2 class="no-case mb-5">No Record were found matching the query.</h2>
                     @else
                       @if($stat == 'contact')
                         @foreach($records as $r)
