@@ -44,22 +44,22 @@
   <div class="container-fluid p-0">
   	<section class="search-section bg-bnb p-3 p-lg-5">
     	<h2>Degegation of Authority for Resource Vertical</h2>
-      <h3>Acronym</h3>
+      <h3>Acronyms</h3>
       <div class="mb-4">
         <div class="row">
-          <div class="col-sm-6">BoD - Board of Director</div>
+          <div class="col-sm-6">CEO - Chief Executive Officer</div>
           <div class="col-sm-6">EMC - Executive Management Committee</div>
         </div>
         <div class="row">
-          <div class="col-sm-6">ALCO - </div>
-          <div class="col-sm-6">CFO - Chief Finance Officer</div>
-        </div>
-        <div class="row">
-          <div class="col-sm-6">HoD - Head of Department</div>
-          <div class="col-sm-6">AML/CFT - </div>
-        </div>
-        <div class="row">
           <div class="col-sm-6">CRO - Chief Resource Officer</div>
+          <div class="col-sm-6">HoD - Head of Department</div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">HOTC - </div>
+          <div class="col-sm-6">BTC - </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">ETC - </div>
         </div>
       </div>
 

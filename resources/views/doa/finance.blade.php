@@ -44,7 +44,7 @@
     <div class="container-fluid bg-bnb p-0">
       	<section class="search-section p-3 p-lg-5">
         	<h2>Finance Vertical Degegation of Authority</h2>
-          <h3>Acronym</h3>
+          <h3>Acronyms</h3>
           <div class="mb-4">
             <div class="row">
               <div class="col-sm-6">BoD - Board of Director</div>

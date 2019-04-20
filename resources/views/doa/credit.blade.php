@@ -55,7 +55,7 @@
               The detail DOA annexed in the credit policy shall be referred for implementation purpose.
             </li>
           </ul>
-          <h3>Acronym</h3>
+          <h3>Acronyms</h3>
           <div class="mb-4">
             <div class="row">
               <div class="col-sm-6">ECC - Executive Credit Committee</div>

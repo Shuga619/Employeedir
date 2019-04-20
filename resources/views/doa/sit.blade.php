@@ -44,22 +44,18 @@
   <div class="container-fluid p-0">
   	<section class="search-section bg-bnb p-3 p-lg-5">
     	<h2>Degegation of Authority for Strategy and Information Technology Vertical</h2>
-      <h3>Acronym</h3>
+      <h3>Acronyms</h3>
       <div class="mb-4">
         <div class="row">
-          <div class="col-sm-6">BoD - Board of Director</div>
           <div class="col-sm-6">EMC - Executive Management Committee</div>
+          <div class="col-sm-6">CEO - Chief Executive Officer</div>
         </div>
         <div class="row">
-          <div class="col-sm-6">ALCO - </div>
-          <div class="col-sm-6">CFO - Chief Finance Officer</div>
+          <div class="col-sm-6">PC -  </div>
+          <div class="col-sm-6">CSIO - Chief Strategy and Information Technology Officer</div>
         </div>
         <div class="row">
           <div class="col-sm-6">HoD - Head of Department</div>
-          <div class="col-sm-6">AML/CFT - </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-6">CRO - Chief Resource Officer</div>
         </div>
       </div>
 

@@ -29,7 +29,7 @@ class VerticalsTableSeeder extends Seeder
         ]);
         DB::table('verticals')->insert([
             'code' => '500',
-            'name' => 'Strategy and Information',
+            'name' => 'Strategy and Information Technology',
         ]);
         DB::table('verticals')->insert([
             'code' => '600',
