@@ -179,3 +179,13 @@
   color: inherit !important;
   text-decoration: none !important;
 }
+
+.bg-bnb{
+  min-width: 100%;
+  min-height: 500px;
+  background: url(../images/bnb-trans.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-attachment: fixed;
+  background-size: contain;
+}

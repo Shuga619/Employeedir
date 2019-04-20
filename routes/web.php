@@ -36,9 +36,12 @@ Route::post('/BNBLEmployeeDirectory', 'DirectoryController@searchDirectory')->na
 |----------------------------------------------------------------------------------
 */ 
 Route::get('/DOA', 'DOAController@index')->name('doa_index_path');
+Route::post('/DOA/get-vertical', 'DOAController@getRoute')->name('get_route_path');
 Route::get('/DOA/credit-vertical', 'DOAController@credit')->name('credit_doa_path');
 Route::get('/DOA/finance-vertical', 'DOAController@finance')->name('finance_doa_path');
-
+Route::get('/DOA/operation-vertical', 'DOAController@operation')->name('operation_doa_path');
+Route::get('/DOA/resource-vertical', 'DOAController@resource')->name('resource_doa_path');
+Route::get('/DOA/strategy-and-information-technology-vertical', 'DOAController@sit')->name('strategy_and_information_technology_doa_path');
 /*
 |----------------------------------------------------------------------------------
 | Routes for Administrator

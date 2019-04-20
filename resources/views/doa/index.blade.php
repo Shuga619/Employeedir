@@ -19,14 +19,15 @@
             		</h3>
           		</li>
               <li class="nav-item mb-5">
-              <form>
-                <select class="form-control mb-4">
-                  <option>Select Vertical</option>
+              <form action="{{ route('get_route_path') }}" method="post">
+                @csrf
+                <select class="form-control mb-4" name="vid">
+                  <option selected="selected">Select Vertical</option>
                   @foreach($verticals as $v)
-                    <option>{{ $v->name }} Vertical</option>
+                    <option value="{{ $v->code }}">{{ $v->name }} Vertical</option>
                   @endforeach
                 </select>
-                <button class="btn btn-block {{$no == 1 ? 'bg-bnb-blue' : 'bg-bnb-orange'}} {{$no == 1 ? 'text-bnb-orange' : 'text-bnb-blue'}}">View DOA</button>
+                <button type="submit" class="btn btn-block {{$no == 1 ? 'bg-bnb-blue' : 'bg-bnb-orange'}} {{$no == 1 ? 'text-bnb-orange' : 'text-bnb-blue'}}">View DOA</button>
               </form>
               </li>
           		<li class="nav-item">
@@ -37,7 +38,7 @@
     </nav>
 
     <div class="container-fluid p-0">
-      	<section class="search-section p-3 p-lg-5 d-block d-flex d-column">
+      	<section class="search-section bg-bnb p-3 p-lg-5 d-block d-flex d-column">
         	<div class="my-auto">
           		<h1 class="mb-5"> 
             		Bhutan National Bank Limited

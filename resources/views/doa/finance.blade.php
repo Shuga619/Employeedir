@@ -19,14 +19,19 @@
             		</h3>
           		</li>
               <li class="nav-item mb-5">
-              <form>
-                <select class="form-control mb-4">
+              <form action="{{ route('get_route_path') }}" method="post">
+                @csrf
+                <select class="form-control mb-4" name="vid">
                   <option>Select Vertical</option>
                   @foreach($verticals as $v)
-                    <option>{{ $v->name }} Vertical</option>
+                    @if($v->code == '200')
+                      <option selected="selected" value="{{ $v->code }}">{{ $v->name }} Vertical</option>
+                    @else
+                      <option value="{{ $v->code }}">{{ $v->name }} Vertical</option>
+                    @endif
                   @endforeach
                 </select>
-                <button class="btn btn-block {{$no == 1 ? 'bg-bnb-blue' : 'bg-bnb-orange'}} {{$no == 1 ? 'text-bnb-orange' : 'text-bnb-blue'}}">View DOA</button>
+                <button type="submit" class="btn btn-block {{$no == 1 ? 'bg-bnb-blue' : 'bg-bnb-orange'}} {{$no == 1 ? 'text-bnb-orange' : 'text-bnb-blue'}}">View DOA</button>
               </form>
               </li>
           		<li class="nav-item">
@@ -36,7 +41,7 @@
       	</div>
     </nav>
 
-    <div class="container-fluid p-0">
+    <div class="container-fluid bg-bnb p-0">
       	<section class="search-section p-3 p-lg-5">
         	<h2>Finance Vertical Degegation of Authority</h2>
           <h3>Acronym</h3>
@@ -73,14 +78,14 @@
                   <th>Sl. #</th>
                   <th>Activities</th>
                   <th>Delegated To</th>
-                  <th>Authority</small></th>
+                  <th>Authority</th>
                   <th>Remarks</th>
                 </thead>
                 <tfoot>
                   <th>Sl. #</th>
                   <th>Activities</th>
                   <th>Delegated To</th>
-                  <th>Authority</small></th>
+                  <th>Authority</th>
                   <th>Remarks</th>
                 </tfoot>
                 <tbody>
@@ -401,14 +406,14 @@
                   <th>Sl. #</th>
                   <th>Activities</th>
                   <th>Delegated To</th>
-                  <th>Authority</small></th>
+                  <th>Authority</th>
                   <th>Remarks</th>
                 </thead>
                 <tfoot>
                   <th>Sl. #</th>
                   <th>Activities</th>
                   <th>Delegated To</th>
-                  <th>Authority</small></th>
+                  <th>Authority</th>
                   <th>Remarks</th>
                 </tfoot>
                 <tbody>
@@ -1043,14 +1048,14 @@
                   <th>Sl. #</th>
                   <th>Activities</th>
                   <th>Delegated To</th>
-                  <th>Authority</small></th>
+                  <th>Authority</th>
                   <th>Remarks</th>
                 </thead>
                 <tfoot>
                   <th>Sl. #</th>
                   <th>Activities</th>
                   <th>Delegated To</th>
-                  <th>Authority</small></th>
+                  <th>Authority</th>
                   <th>Remarks</th>
                 </tfoot>
                 <tbody>
@@ -1229,14 +1234,14 @@
                   <th>Sl. #</th>
                   <th>Activities</th>
                   <th>Delegated To</th>
-                  <th>Authority</small></th>
+                  <th>Authority</th>
                   <th>Remarks</th>
                 </thead>
                 <tfoot>
                   <th>Sl. #</th>
                   <th>Activities</th>
                   <th>Delegated To</th>
-                  <th>Authority</small></th>
+                  <th>Authority</th>
                   <th>Remarks</th>
                 </tfoot>
                 <tbody>
