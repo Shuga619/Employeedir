@@ -58,7 +58,7 @@
           				</div>
           				<div class="form-row">
           					<div class="col-md-12">
-          						<button type="submit" class="btn {{$no == 1 ? 'bg-bnb-orange' : 'bg-bnb-blue'}} btn-block btn-lg">Search Directory</button>
+          						<button type="submit" class="btn {{$no == 1 ? 'bg-bnb-orange' : 'bg-bnb-blue'}} btn-block btn-lg text-white">Search Directory</button>
           					</div>
           				</div>
           			</form>
@@ -70,7 +70,10 @@
           				Keeping all the above fields blank will view all the employees.
           				<br>
           				Keeping one or two above fields blank will ignore the blank fields.
-          			</p>
+          			  <br>
+                  <br>
+                  <a href="{{ route('login_info_path') }}" class="btn {{$no == 1 ? 'bg-bnb-orange' : 'bg-bnb-blue'}} btn-sm text-white">Edit your Information</a>
+                </p>
           		</div>
         	</div>
       	</section>

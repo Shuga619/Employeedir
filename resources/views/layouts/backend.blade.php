@@ -64,28 +64,28 @@
             </li>
 
             <!-- Divider -->
-            <hr class="sidebar-divider">
+            <!-- <hr class="sidebar-divider"> -->
 
             <!-- Heading -->
-            <div class="sidebar-heading">
+            <!-- <div class="sidebar-heading">
                 DOA Controls
-            </div>
+            </div> -->
 
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link collapsed" href="#">
                     <i class="fas fa-sitemap fa-fw"></i>
                     <span>View DOA</span>
                 </a>
-            </li>
+            </li> -->
 
             <!-- Nav Item - Charts -->
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link" href="charts.html">
                     <i class="fas fa-plus-circle fa-fw"></i>
                     <span>New Entry</span>
                 </a>
-            </li>
+            </li> -->
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 

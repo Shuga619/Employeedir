@@ -11,17 +11,21 @@
           		<div class="col-lg-7">
             		<div class="p-5">
               			<div class="text-center">
-                			<h1 class="h4 text-gray-900 mb-4">Add Contact to Employee Directory </h1>
+                			<h1 class="h4 text-gray-900 mb-4">Edit Contact Information of {{ $employee->name }}</h1>
               			</div>
               			<hr>
               			<form class="user" action="{{ route('update_contact_path') }}" method="POST" enctype="multipart/form-data">
                       @csrf
                 			<div class="form-group row">
-                  				<div class="col-sm-12 mb-3 mb-sm-0">
+                  				<div class="col-sm-7 mb-3 mb-sm-0">
                             <small>Name</small>
                     				<input type="text" class="form-control form-control-user" placeholder="Employee Name" name="name" value="{{ $employee->name }}" required autofocus>
                             <input type="hidden" name="id" value="{{ $employee->id }}">
                   				</div>
+                          <div class="col-sm-5 mb-3 mb-sm-0">
+                            <small>Employee ID</small>
+                            <input type="text" class="form-control form-control-user" placeholder="Employee ID" name="empid" value="{{ $employee->employee_id }}" required autofocus>
+                          </div>
                 			</div>
                 			<div class="form-group row">
                   				<div class="col-sm-6 mb-3 mb-sm-0">

@@ -51,12 +51,12 @@
               <div class="col-sm-6">EMC - Executive Management Committee</div>
             </div>
             <div class="row">
-              <div class="col-sm-6">ALCO - </div>
+              <div class="col-sm-6">ALCO - Asset Liability Committee</div>
               <div class="col-sm-6">CFO - Chief Finance Officer</div>
             </div>
             <div class="row">
               <div class="col-sm-6">HoD - Head of Department</div>
-              <div class="col-sm-6">AML/CFT - </div>
+              <div class="col-sm-6">AML/CFT - Anti-Money Laundering and Countering Financing of Terrorism</div>
             </div>
             <div class="row">
               <div class="col-sm-6">CRO - Chief Resource Officer</div>

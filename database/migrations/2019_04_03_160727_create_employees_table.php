@@ -19,6 +19,7 @@ class CreateEmployeesTable extends Migration
             $table->string('designation');
             $table->string('title');
             $table->unsignedInteger('department_id');
+            $table->string('employee_id');
             $table->string('image');
             $table->timestamps();
             $table->foreign('department_id')->references('id')

@@ -189,3 +189,13 @@
   background-attachment: fixed;
   background-size: contain;
 }
+
+.lg-input{
+  border:0px;
+  border-bottom: 1px solid #BDBDBD;
+}
+.upper{
+  z-index: 20;
+  position: absolute;
+  width: 100%;
+}

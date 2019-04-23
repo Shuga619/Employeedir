@@ -51,7 +51,7 @@
           <div class="col-sm-6">CEO - Chief Executive Officer</div>
         </div>
         <div class="row">
-          <div class="col-sm-6">PC -  </div>
+          <div class="col-sm-6">PC - Project Committee </div>
           <div class="col-sm-6">CSIO - Chief Strategy and Information Technology Officer</div>
         </div>
         <div class="row">

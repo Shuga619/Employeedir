@@ -55,11 +55,11 @@
           <div class="col-sm-6">HoD - Head of Department</div>
         </div>
         <div class="row">
-          <div class="col-sm-6">HOTC - </div>
-          <div class="col-sm-6">BTC - </div>
+          <div class="col-sm-6">HOTC - Head Office Tender Committee</div>
+          <div class="col-sm-6">BTC - Branch Tender Committee</div>
         </div>
         <div class="row">
-          <div class="col-sm-6">ETC - </div>
+          <div class="col-sm-6">ETC - Executive Tender Committee</div>
         </div>
       </div>
 

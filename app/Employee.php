@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Employee extends Model
 {
     protected $fillable = [
-      'name','designation','title','department_id',  
+      'name','designation','title','employee_id','department_id',  
     ];
 
     public function department()
@@ -18,5 +18,10 @@ class Employee extends Model
     public function contact()
     {
     	return $this->hasOne('App\Contact', 'employee_id','id');
+    }
+
+    public function signin()
+    {
+        return $this->hasOne('App\Signin', 'employee_id','id');
     }
 }

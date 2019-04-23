@@ -19,6 +19,17 @@
     <link rel="shortcut icon" href="{{ url('images/directory.png') }}">
 </head>
 <body id="page-top">
+    @if(session('status')=="1")
+        <div class="upper alert alert-success" role="alert">
+            {{ session('msg') }}
+        </div>
+    @endif
+    @if(session('status')=="0")
+        <div class="upper alert alert-danger" role="alert">
+            {{ session('msg') }}
+        </div>
+    @endif
+
     @yield('content')
 
     <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
@@ -29,6 +40,7 @@
 
     <!-- Custom scripts for this template -->
     <script src="{{ asset('js/directory.min.js') }}"></script>
+    <script src="{{ asset('js/alert.js')}}"></script>
     <script src="{{ asset('js/tooltip.js') }}" type="text/javascript"></script>
 </body>
 </html>

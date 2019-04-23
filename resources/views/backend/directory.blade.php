@@ -13,8 +13,9 @@
             			<tr>
             				<th>SL. #</th>
             				<th>Name</th>
+                    <th>Employee ID</th>
             				<th>Department</th>
-            				<th>Designation</th>
+            				<th>Job Title</th>
                     <th>Extension</th>
             				<th>Action</th>
             			</tr>
@@ -23,8 +24,9 @@
 			        	<tr>
 			        		<th>SL. #</th>
 			             	<th>Name</th>
+                    <th>Employee ID</th>
 			             	<th>Department</th>
-			             	<th>Designation</th>
+			             	<th>Job Title</th>
                     <th>Extension</th>
 			             	<th>Action</th>
 			        	</tr>
@@ -44,8 +46,9 @@
                           <b>{{ $employee->name }}</b>
                         </a>  
                       </td>
+                      <td>{{ $employee->employee_id }}</td>
                       <td>{{ $employee->department->name }}</td>
-                      <td>{{ $employee->designation }}</td>
+                      <td>{{ $employee->title }}</td>
                       <td>{{ $employee->contact->extension }}</td>
                       <td class="text-center">
                         <div class="btn-group">

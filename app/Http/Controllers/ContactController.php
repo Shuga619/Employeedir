@@ -7,6 +7,7 @@ use App\Employee;
 use App\Department;
 use App\Location;
 use App\Contact;
+use App\Signin;
 use Auth;
 
 class ContactController extends Controller
@@ -28,15 +29,18 @@ class ContactController extends Controller
     	$email = $request->email;
     	$mobile = $request->mobile;
     	$location = $request->location;
+        $employee_id = $request->empid;
     	$image = request()->file('image')->getClientOriginalName();
     	// Storage::delete('public/employee_pdf/'.$request->olddoc);
         request()->file('image')->storeAs('public/employee_images',$image);
     	$employee = new Employee;
     	$contact = new Contact;
+        $signin = new Signin;
     	$employee->name = $request->name;
     	$employee->designation = $designation;
     	$employee->title = $title;
     	$employee->department_id = $department;
+        $employee->employee_id =$employee_id;
     	$employee->image = $image;
     	if($employee->save())
     	{
@@ -48,6 +52,8 @@ class ContactController extends Controller
     		$contact->employee_id = $employee->id;
     		if($contact->save())
     		{
+                $signin->employee_id = $employee->id;
+                $signin->save();
     			$status = '1';
     			$msg = 'Employee Information has been added to Contact.';
     		}
@@ -79,6 +85,7 @@ class ContactController extends Controller
     	// return $request->all();
     	$status = '1';
     	$name = $request->name;
+        $employee_id = $request->empid;
     	$designation = $request->designation;
     	$title = $request->title;
     	if($request->department == '0' || $request->department == $request->odepartment)
@@ -96,6 +103,7 @@ class ContactController extends Controller
     		$location = $request->location;
     	Employee::where('id',$request->id)->update([
     		'name' => $request->name,
+            'employee_id'=> $employee_id,
     		'designation' => $designation,
     		'title' => $title,
     		'department_id' => $department
@@ -118,7 +126,7 @@ class ContactController extends Controller
         // return $csvData;
         $rows = array_map('str_getcsv',explode("\n", $csvData));
         $header = array_shift($rows);
-        $check = ['name','designation','job_title','department','extension','mobile','email','flexcube','location','image'];
+        $check = ['name','employee_id','designation','job_title','department','extension','mobile','email','flexcube','location','image'];
         if($header == $check)
         {
             foreach($rows as $row){
@@ -127,7 +135,9 @@ class ContactController extends Controller
                     $row = array_combine($header, $row);
                     $employee = new Employee;
                     $contact = new Contact;
+                    $signin = new Signin;
                     $employee->name = $row['name'];
+                    $employee->employee_id = $row['employee_id'];
                     $employee->designation = $row['designation'];
                     $employee->title = $row['job_title'];
                     $employee->department_id = $row['department'];
@@ -141,7 +151,11 @@ class ContactController extends Controller
 			    		$contact->location_id = $row['location'];
 			    		$contact->employee_id = $employee->id;
 			    		$contact->save();
-			    		$status = '1';
+                        
+                        $signin->employee_id = $employee->id;
+                        $signin->save();
+			    		
+                        $status = '1';
 			    		$msg = "Contact Information has been Successfully uploaded from CSV file.";	
                 	}
                 	else

@@ -42,6 +42,18 @@ Route::get('/DOA/finance-vertical', 'DOAController@finance')->name('finance_doa_
 Route::get('/DOA/operation-vertical', 'DOAController@operation')->name('operation_doa_path');
 Route::get('/DOA/resource-vertical', 'DOAController@resource')->name('resource_doa_path');
 Route::get('/DOA/strategy-and-information-technology-vertical', 'DOAController@sit')->name('strategy_and_information_technology_doa_path');
+
+
+/*
+|----------------------------------------------------------------------------------
+| Routes for Employee Login
+|----------------------------------------------------------------------------------
+*/ 
+Route::get('/BNBLEmployeeDirectory/edit', 'InfoController@getEmployee')->name('login_info_path');
+Route::get('/BNBLEmployeeDirectory/otp-verification', 'InfoController@getOtp')->name('opt_path');
+Route::get('/BNBLEmployeeDirectory/edit/info', 'InfoController@getEditForm')->name('edit_info_path');
+Route::post('/BNBLEmployeeDirectory/otp-verification', 'InfoController@sendOTP')->name('get_employee_and_send_otp_path');
+Route::get('sendmail', 'InfoController@sendMail');
 /*
 |----------------------------------------------------------------------------------
 | Routes for Administrator

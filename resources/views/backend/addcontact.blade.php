@@ -46,9 +46,14 @@
                     				<input type="text" class="form-control form-control-user" placeholder="Flexcube User ID" name="flexcube">
                   				</div>
                 			</div>
-                			<div class="form-group">
+                			<div class="form-group row">
+                        <div class="col-sm-6 mb-3 mb-sm-0">
+                          <input type="text" class="form-control form-control-user" placeholder="Employee ID" name="empid">
+                        </div>
+                        <div class="col-sm-6 mb-3 mb-sm-0">
                   				<input type="email" class="form-control form-control-user" placeholder="Email Address" name="email">
-                			</div>
+                			  </div>
+                      </div>
                 			<div class="form-group row">
                   				<div class="col-sm-4 mb-3 mb-sm-0">
                     				<input type="text" class="form-control form-control-user" placeholder="Mobile Number" name="mobile" required>

@@ -18,7 +18,7 @@
     <!-- Custom styles for this template -->
     <link href="{{ asset('css/directory.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-    <link rel="shortcut icon" href="{{ url('images/directory.png') }}">
+    <link rel="shortcut icon" href="{{ url('images/doa.png') }}">
 </head>
 <body id="page-top">
     @yield('content')

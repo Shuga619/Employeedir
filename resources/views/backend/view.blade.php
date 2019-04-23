@@ -23,6 +23,11 @@
                       <h4>Name : {{ $employee->name }}</h4>
                     </div>
                   </div>
+                  <div class="row mb-3">  
+                    <div class="col-md-12">
+                      <h5>Employee ID : {{ $employee->employee_id }}</h5>
+                    </div>
+                  </div>
                   <div class="row mb-3">
                     <div class="col-md-6">
                       <h5>Designation : {{ $employee->designation }}</h5>
