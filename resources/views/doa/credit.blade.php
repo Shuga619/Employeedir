@@ -43,7 +43,7 @@
 
     <div class="container-fluid p-0">
       	<section class="search-section bg-bnb p-3 p-lg-5">
-        	 <h2>Credit Vertical Degegation of Authority</h2>
+        	 <h2>Degegation of Authority for Credit Vertical</h2>
           <ul>
             <li>
               The above DOA matrix pertains to only approval level authority for credit-related activities. It is derived from the DOA in the credit policy which is approved and endorsed by the board. The detailed write up of the DOA policy is annexed separately. It forms part of the credit policy and contains definition, description, responsibilities, and committee structures for various level of authorities.                 

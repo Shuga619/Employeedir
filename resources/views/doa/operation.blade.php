@@ -43,7 +43,7 @@
 
     <div class="container-fluid p-0">
       	<section class="search-section bg-bnb p-3 p-lg-5">
-        	<h2>Operation Vertical Degegation of Authority</h2>
+        	<h2>Degegation of Authority for Operation Vertical</h2>
           <h3>Acronyms</h3>
           <div class="mb-4">
             <div class="row">
