@@ -62,6 +62,15 @@
               <div class="col-sm-6">CRO - Chief Resource Officer</div>
             </div>
           </div>
+          <div class="col-md-6 mb-4">
+            <h4>Download Link for DOA</h4>
+            <a href="{{ asset('doa_documents/DoAforFinanceVertical.xlsx') }}">
+              <div class="download-box">
+                <i class="fas fa-file-excel fa-2x fa-fw"></i>
+                <span>DOA for Finance Vertical</span>
+              </div>
+            </a>
+          </div>
 
           <ul class="nav nav-pills">
             <li class="active p-5"><a data-toggle="pill" href="#general"><h4 class="text-bnb-blue">General DOA</h4></a></li>

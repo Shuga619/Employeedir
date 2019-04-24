@@ -199,3 +199,28 @@
   position: absolute;
   width: 100%;
 }
+
+.download-box{
+  width: 100%;
+  height: 46px;
+  padding: 5px;
+  border:1px dashed #3066A6;
+  border-radius: 10px;
+  transition-duration: 1s;
+  /*background-color: red;*/
+}
+
+.download-box:hover{
+  box-shadow: 3px 3px 5px #3066A6;
+  transition-duration: 1s;
+}
+
+.download-box i{
+  color: #1e6d42;
+}
+
+.download-box span{
+  font-family: 'century gothic';
+  font-size: 1.3rem;
+  color: #3066A6;
+}

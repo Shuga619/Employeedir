@@ -62,7 +62,15 @@
           <div class="col-sm-6">ETC - Executive Tender Committee</div>
         </div>
       </div>
-
+      <div class="col-md-6 mb-4">
+        <h4>Download Link for DOA</h4>
+        <a href="{{ asset('doa_documents/DoAforResourceVertical.xlsx') }}">
+          <div class="download-box">
+            <i class="fas fa-file-excel fa-2x fa-fw"></i>
+            <span>DOA for Resource Vertical</span>
+          </div>
+        </a>
+      </div>
       <ul class="nav nav-pills">
         <li class="active p-4"><a data-toggle="pill" href="#hr"><h4 class="text-bnb-blue">Human Resource</h4></a></li>
         <li class="p-4"><a data-toggle="pill" href="#administration"><h4 class="text-bnb-blue">Administration</h4></a></li>
