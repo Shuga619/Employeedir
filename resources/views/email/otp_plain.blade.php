@@ -1,1 +1,3 @@
-You otp is 654321
+Your OTP for editing your information is given below:
+
+{{ $otp }}

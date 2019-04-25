@@ -50,10 +50,11 @@ Route::get('/DOA/strategy-and-information-technology-vertical', 'DOAController@s
 |----------------------------------------------------------------------------------
 */ 
 Route::get('/BNBLEmployeeDirectory/edit', 'InfoController@getEmployee')->name('login_info_path');
-Route::get('/BNBLEmployeeDirectory/otp-verification', 'InfoController@getOtp')->name('opt_path');
-Route::get('/BNBLEmployeeDirectory/edit/info', 'InfoController@getEditForm')->name('edit_info_path');
+Route::get('/BNBLEmployeeDirectory/otp-verification/{eid}', 'InfoController@getOtp')->name('otp_path');
+Route::get('/BNBLEmployeeDirectory/edit/{eid}/info', 'InfoController@getEditForm')->name('edit_info_path');
 Route::post('/BNBLEmployeeDirectory/otp-verification', 'InfoController@sendOTP')->name('get_employee_and_send_otp_path');
-Route::get('sendmail', 'InfoController@sendMail');
+Route::post('BNBLEmployeeDirectory/verify_otp', 'InfoController@verifyOTP')->name('verify_otp_path');
+Route::post('BNBLEmployeeDirectory/update-employee-info', 'InfoController@updateInfo')->name('update_employee_info_path');
 /*
 |----------------------------------------------------------------------------------
 | Routes for Administrator

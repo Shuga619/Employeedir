@@ -16,9 +16,13 @@ class SendOTP extends Mailable
      *
      * @return void
      */
-    public function __construct()
+    public $otp;
+    public $eid;
+
+    public function __construct($otp,$eid)
     {
-        //
+        $this->otp = $otp;
+        $this->eid = $eid;
     }
 
     /**
@@ -28,7 +32,8 @@ class SendOTP extends Mailable
      */
     public function build()
     {
-        return $this->from('taphin@bnb.bt')
+        return $this->from('system-mailer@bnb.bt')
+                    ->subject('OTP for Employee Directory Information Edit')
                     ->view('email.otp')
                     ->text('email.otp_plain');
     }

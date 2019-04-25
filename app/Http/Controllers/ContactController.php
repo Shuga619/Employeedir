@@ -97,7 +97,7 @@ class ContactController extends Controller
     	$flexcube = $request->flexcube;
     	$email = $request->email;
     	$mobile = $request->mobile;
-    	if($request->location == '0' || $request->department == $request->olocation)
+    	if($request->location == '0' || $request->location == $request->olocation)
     		$location = $request->olocation;
     	else
     		$location = $request->location;

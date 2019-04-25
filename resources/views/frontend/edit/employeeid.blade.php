@@ -18,6 +18,9 @@
                   Employee Directory 
                 </h3>
               </li>
+              <li class="nav-item mb-5">
+                <a href="{{ route('get_search_path') }}" class="btn btn-block {{$no == 1 ? 'bg-bnb-blue' : 'bg-bnb-orange'}} {{$no == 1 ? 'text-bnb-orange' : 'text-bnb-blue'}}"><i class="fas fa-chevron-left fa-fw"></i> Back to Directory Search</a>
+              </li>
               <li class="nav-item">
                 <small class="text-white"><b>Built By : <br> BNBL IT Department <br>2019</b></small>
               </li>
@@ -41,7 +44,7 @@
                     </div>
                     <div class="col-4">
                       <select name="option_otp" class="form-control form-sz-lg">
-                        <option value="mobile">Registered Mobile Number</option>
+                        <option value="mobile" disabled="disabled">Registered Mobile Number</option>
                         <option value="email" selected="selected">Registered Email ID</option>
                       </select>
                     </div>

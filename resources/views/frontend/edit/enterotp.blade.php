@@ -33,11 +33,12 @@
               </h1>
               <h2 class="no-case mb-4">Enter your OTP below</h2>
               <div class="mb-5">
-                <form class="d-block" action="{{ route('search_directory_path') }}" method="POST">
+                <form class="d-block" action="{{ route('verify_otp_path') }}" method="POST">
                   @csrf
                   <div class="form-row mb-3">
                     <div class="col-12">
-                      <input type="text" name="employeeid" class="form-control text-center form-sz-lg" placeholder="6 Digit OTP" autofocus="autofocus">
+                      <input type="text" name="otp" class="form-control text-center form-sz-lg" placeholder="6 Digit OTP" autofocus="autofocus" required="required" maxlength="6" minlength="6">
+                      <input type="hidden" name="eid" value="{{ $eid }}">
                     </div>
                   </div>
                   <div class="form-row">
