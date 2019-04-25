@@ -47,6 +47,11 @@
 
           		<div class="social-icons">
             		<a href="#" class="mb-3">
+                    <i class="fas fa-id-badge"></i> 
+                </a>
+                <h3>Employee ID : {{ $record->employee_id }}</h3>
+                <br>
+                <a href="#" class="mb-3">
               			<i class="fas fa-phone"></i> 
             		</a>
             		<h3>Extension : {{ $record->contact->extension }}</h3>
