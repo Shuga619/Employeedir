@@ -134,7 +134,6 @@ class InfoController extends Controller
         {
             $status = '1';
             $name = $request->name;
-            $employee_id = $request->empid;
             $designation = $request->designation;
             $title = $request->title;
             if($request->new_dept == '0' || $request->new_dept == $request->odepartment)
@@ -151,7 +150,6 @@ class InfoController extends Controller
                 $location = $request->new_location;
             Employee::where('id',$request->id)->update([
                 'name' => $request->name,
-                'employee_id'=> $employee_id,
                 'designation' => $designation,
                 'title' => $title,
                 'department_id' => $department

@@ -40,11 +40,14 @@
                 <span title="Designation" data-toggle="tooltip" class="text-bnb-blue"data-placement="bottom"><input type="text" name="designation" value="{{$record->designation}}" class="lg-input"></span>
                  &nbsp; | &nbsp; 
                 <span class="text-bnb-orange"data-placement="bottom" data-toggle="tooltip" title="Job Title"><input type="text" name="title" value="{{$record->title}}" class="lg-input"></span>
-                &nbsp; | &nbsp; 
-                <span class="text-bnb-orange"data-placement="bottom" data-toggle="tooltip" title="Employee ID"><input type="text" name="empid" value="{{$record->employee_id}}" class="lg-input"></span>
               </div>
               <hr>
               <div class="social-icons">
+                <a href="#" class="mb-3">
+                    <i class="fas fa-id-badge"></i> 
+                </a>
+                <h3>Employee ID : {{ $record->employee_id }}</h3>
+                <br>
                 <a href="#" class="mb-3">
                     <i class="fas fa-sitemap"></i> 
                 </a>
