@@ -53,9 +53,6 @@
                   <br>
                   Check your email or mobile for the OTP. If you didn't receive the OTP, call 1277 or 1265 for assistance.
                   <br>
-                  <br>
-                  <small>Didn't receive OTP,</small>
-                  <a href="{{ route('login_info_path') }}" class="btn {{$no == 1 ? 'bg-bnb-orange' : 'bg-bnb-blue'}} btn-sm text-white">Resend OTP</a>
                 </p>
           </div>
         </section>
