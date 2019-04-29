@@ -32,14 +32,14 @@
           <div class="my-auto">
             <h2>Edit {{ $record->name }}'s Information</h2>
               <h2 class="mb-0"> 
-                <input type="text" name="name" value="{{ $record->name }}" class="lg-input">
+                <input type="text" name="name" value="{{ $record->name }}" class="lg-input" required="required">
                 <input type="hidden" name="id" value="{{ $record->id }}">
               </h2>
               <br>
               <div class="subheading mb-4">
-                <span title="Designation" data-toggle="tooltip" class="text-bnb-blue"data-placement="bottom"><input type="text" name="designation" value="{{$record->designation}}" class="lg-input"></span>
+                <span title="Designation" data-toggle="tooltip" class="text-bnb-blue"data-placement="bottom"><input type="text" name="designation" value="{{$record->designation}}" class="lg-input" required="required"></span>
                  &nbsp; | &nbsp; 
-                <span class="text-bnb-orange"data-placement="bottom" data-toggle="tooltip" title="Job Title"><input type="text" name="title" value="{{$record->title}}" class="lg-input"></span>
+                <span class="text-bnb-orange"data-placement="bottom" data-toggle="tooltip" title="Job Title"><input type="text" name="title" value="{{$record->title}}" class="lg-input" required="required"></span>
               </div>
               <hr>
               <div class="social-icons">
@@ -71,7 +71,7 @@
                 <a href="#" class="mb-3">
                     <i class="fas fa-phone"></i> 
                 </a>
-                <h3>Extension : <input type="text" name="extension" value="{{ $record->contact->extension }}" class="lg-input"></h3>
+                <h3>Extension : <input type="text" name="extension" value="{{ $record->contact->extension }}" class="lg-input" ></h3>
                 <br>
                 <a href="#" class="mb-3">
                     <i class="fas fa-mobile"></i>
@@ -89,7 +89,7 @@
                 <a href="#" class="mb-3">
                     <i class="fas fa-user-shield"></i>
                 </a>
-                <h3>Flexcube User ID : <span class="text-bnb-blue no-case"> <input type="text" name="flexcube" value="{{ $record->contact->flexcube }}" class="lg-input"></span></h3>
+                <h3>Flexcube User ID : <span class="text-bnb-blue no-case"> <input type="text" name="flexcube" value="{{ $record->contact->flexcube }}" class="lg-input" ></span></h3>
           
                 <hr>
                 <a href="#">
