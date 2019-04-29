@@ -56,7 +56,7 @@ class DirectoryController extends Controller
         elseif($request->department=='0' && $request->location == '0' && $request->employeename == null && $request->flexcube != null)
         {
             $empids = Contact::where('flexcube','like',"%$request->flexcube%")->pluck('employee_id'); 
-            return $records = Employee::orderBy('name')->whereIn('id',$empids)->get();
+            $records = Employee::orderBy('name')->whereIn('id',$empids)->get();
         }
         elseif($request->department!='0' && $request->location != '0' && $request->employeename == null && $request->flexcube == null)
         {
