@@ -43,7 +43,7 @@ class DepartmentsTableSeeder extends Seeder
         ]);
         DB::table('departments')->insert([
         	'code' => '302',
-        	'name' => 'Operations',
+        	'name' => 'Operations - Banking',
         	'vertical_id' => '3',   
         ]);
         DB::table('departments')->insert([
@@ -73,7 +73,7 @@ class DepartmentsTableSeeder extends Seeder
         ]);
         DB::table('departments')->insert([
         	'code' => '601',
-        	'name' => 'General Management',
+        	'name' => 'Executive Members',
         	'vertical_id' => '6',   
         ]);
         DB::table('departments')->insert([

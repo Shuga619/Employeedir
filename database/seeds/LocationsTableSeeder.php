@@ -13,7 +13,7 @@ class LocationsTableSeeder extends Seeder
     {
         DB::table('locations')->insert([
         	'code' => '100', 
-        	'name' => 'Head Office',
+        	'name' => 'Corporate Office',
         	'category' => 'headoffice',
         ]);
       	DB::table('locations')->insert([
@@ -73,7 +73,7 @@ class LocationsTableSeeder extends Seeder
       	]);
       	DB::table('locations')->insert([
       		'code' => '999', 
-      		'name' => 'Corporate Branch',
+      		'name' => 'Corporate Banking',
       		'category' => 'branch',
       	]);
       	// Extensions

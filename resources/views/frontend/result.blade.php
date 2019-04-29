@@ -36,7 +36,7 @@
           		</h1>
           		<h2 class="no-case">Search Result(s)</h2>
               <h4 class="no-case">
-                <small>Ordering of search result is based on time of registration of the employee detail with the Employee Directory System.</small>
+                <small>Ordering of search result is based on alphabetical order of Employees' name</small>
               </h4>
           		<div class="mb-5">
           		  <section class="py-5">

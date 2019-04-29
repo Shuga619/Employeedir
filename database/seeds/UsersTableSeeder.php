@@ -16,5 +16,10 @@ class UsersTableSeeder extends Seeder
             'email' => 'taphin@bnb.bt',
             'password' => bcrypt('D1rect0ry@2oi9'),
         ]);
+        DB::table('users')->insert([
+            'name' => 'Directory Administrator2',
+            'email' => 'damber@bnb.bt',
+            'password' => bcrypt('D1rect0ry@2oi9'),
+        ]);
     }
 }

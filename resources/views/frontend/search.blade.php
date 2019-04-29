@@ -36,10 +36,13 @@
           			<form class="d-block" action="{{ route('search_directory_path') }}" method="POST">
                   @csrf
           				<div class="form-row mb-3">
-          					<div class="col-4">
+          					<div class="col-3">
           						<input type="text" name="employeename" class="form-control form-sz-lg" placeholder="Employee Name">
           					</div>
-          					<div class="col-4">
+                    <div class="col-3">
+                      <input type="text" name="flexcube" class="form-control form-sz-lg" placeholder="Flexcube ID">
+                    </div>
+          					<div class="col-3">
           						<select name="department" class="form-control form-sz-lg">
           							<option selected="selected" value="0">Select Department</option>
                         @foreach($departments as $d)
@@ -47,7 +50,7 @@
                         @endforeach
           						</select>
           					</div>
-          					<div class="col-4">
+          					<div class="col-3">
           						<select name="location" class="form-control form-sz-lg">
           							<option selected="selected" value="0">Select Location</option>
           						  @foreach($locations as $l)
