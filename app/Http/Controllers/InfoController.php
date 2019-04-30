@@ -53,8 +53,8 @@ class InfoController extends Controller
         }
     	$no = rand(10,30)%2;
     	$record = Employee::where('employee_id',Crypt::decryptString($request->eid))->first();
-    	$location = Location::all();
-    	$department = Department::all();
+    	$location = Location::orderBy('name')->get();
+    	$department = Department::orderBy('name')->get();
     	return view('frontend.edit.edit',compact('no','record','department','location'));
     }
 
