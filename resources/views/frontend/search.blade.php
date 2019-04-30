@@ -28,9 +28,12 @@
     <div class="container-fluid p-0">
       	<section class="search-section p-3 p-lg-5 d-block d-flex d-column {{$no == 1 ? 'bg-bnb-blue' : 'bg-bnb-orange'}}">
         	<div class="my-auto">
-          		<h1 class="mb-0"> 
+          		<h1 class="mb-0 d-none d-xl-block"> 
             		Bhutan National Bank Limited
           		</h1>
+              <h1 class="mb-0 d-none d-lg-block d-xl-none d-sm-block d-xs-none"> 
+                Bhutan National Bank
+              </h1>
           		<h2 class="no-case mb-5">Search Employee Directory</h2>
           		<div class="mb-5">
           			<form class="d-block" action="{{ route('search_directory_path') }}" method="POST">
