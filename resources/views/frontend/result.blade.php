@@ -34,7 +34,7 @@
           		<h1 class="mb-0"> 
             		Bhutan National Bank Limited
           		</h1>
-          		<h2 class="no-case">Search Result(s)</h2>
+          		<h2 class="no-case">Found {{ $records->count() }} Result(s)Matching the Search</h2>
               <h4 class="no-case">
                 <small>Ordering of search result is based on alphabetical order of Employees' name</small>
               </h4>
