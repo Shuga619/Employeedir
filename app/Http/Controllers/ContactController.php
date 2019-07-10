@@ -9,6 +9,7 @@ use App\Location;
 use App\Contact;
 use App\Signin;
 use Auth;
+use Storage;
 
 class ContactController extends Controller
 {
@@ -84,39 +85,62 @@ class ContactController extends Controller
     public function updateContact(Request $request){
     	// return $request->all();
     	$status = '1';
-    	$name = $request->name;
-        $employee_id = $request->empid;
-    	$designation = $request->designation;
-    	$title = $request->title;
-    	if($request->department == '0' || $request->department == $request->odepartment)
-    		$department = $request->odepartment;
-    	else
-    		$department = $request->department;
+        $employee = Employee::find($request->id);
+        $contact = $employee->contact;
+        if(!blank($employee))
+        {
+            $name = $request->name;
+            $employee_id = $request->empid;
+            $designation = $request->designation;
+            $title = $request->title;
+            if (!blank($request->profile)){
+                $profile = time()."-".request()->file('profile')->getClientOriginalName();
+                request()->file('profile')->storeAs('public/employee_images',$profile);
+                Storage::delete("public/employee_images/$employee->image");
+            }
+            else{
+                $profile = $employee->image;
+            }
+            
+            if($request->department == '0' || $request->department == $request->odepartment)
+             $department = $request->odepartment;
+            else
+             $department = $request->department;
 
-    	$extension = $request->extension;
-    	$flexcube = $request->flexcube;
-    	$email = $request->email;
-    	$mobile = $request->mobile;
-    	if($request->location == '0' || $request->location == $request->olocation)
-    		$location = $request->olocation;
-    	else
-    		$location = $request->location;
-    	Employee::where('id',$request->id)->update([
-    		'name' => $request->name,
-            'employee_id'=> $employee_id,
-    		'designation' => $designation,
-    		'title' => $title,
-    		'department_id' => $department
-    	]);
-    	Contact::where('employee_id',$request->id)->update([
-    		'email' => $email,
-    		'mobile' => $mobile,
-    		'extension' => $extension,
-    		'flexcube' => $flexcube,
-    		'location_id' => $location
-    	]);
-    	$msg = "Contact Information of $request->name has been updated.";
-    	return back()->with(['status'=>$status,'msg'=>$msg]);
+            $extension = $request->extension;
+            $flexcube = $request->flexcube;
+            $email = $request->email;
+            $mobile = $request->mobile;
+            if($request->location == '0' || $request->location == $request->olocation)
+             $location = $request->olocation;
+            else
+             $location = $request->location;
+
+            
+            $employee->name = $request->name;
+            $employee->employee_id= $employee_id;
+            $employee->designation = $designation;
+            $employee->title = $title;
+            $employee->department_id = $department;
+            $employee->image = $profile;
+            $employee->save();
+            
+            $contact->email = $email;
+            $contact->mobile = $mobile;
+            $contact->extension = $extension;
+            $contact->flexcube = $flexcube;
+            $contact->location_id = $location;
+            $contact->save();
+
+            $msg = "Contact Information of $request->name has been updated.";
+            return redirect()->route('view_contact_path',$request->id)->with(['status'=>$status,'msg'=>$msg]);
+        }
+        else
+        {
+                $status ='0';
+                $msg = "Employee not found in the Directory.";
+                return redirect()->route('directory_path')->with(['status'=>$status,'msg'=>$msg]);
+        }
     }
 
     public function bulkUpload(Request $request){

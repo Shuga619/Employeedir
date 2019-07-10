@@ -19,7 +19,7 @@
             		</h3>
           		</li>
           		<li class="nav-item">
-          			<small class="text-white"><b>Built By : <br> BNBL IT Department <br>2019</b></small>
+          			<small class="text-white"><b>Built By : <br> BNBL IT Department <br>{{ date_format(date_create(),'Y') }}</b></small>
           		</li>
         	</ul>
       	</div>
@@ -28,24 +28,24 @@
     <div class="container-fluid p-0">
       	<section class="search-section p-3 p-lg-5 d-block d-flex d-column {{$no == 1 ? 'bg-bnb-blue' : 'bg-bnb-orange'}}">
         	<div class="my-auto">
-          		<h1 class="mb-0 d-none d-xl-block"> 
+          		<h1 class="mb-0 d-none d-xl-block {{$no == 1 ? 'text-white' : ''}}"> 
             		Bhutan National Bank Limited
           		</h1>
-              <h1 class="mb-0 d-none d-lg-block d-xl-none d-sm-block d-xs-none"> 
+              <h1 class="mb-0 d-none d-lg-block d-xl-none d-sm-block d-xs-none {{$no == 1 ? 'text-white' : ''}}"> 
                 Bhutan National Bank
               </h1>
-          		<h2 class="no-case mb-5">Search Employee Directory</h2>
+          		<h2 class="no-case mb-5 {{$no == 1 ? 'text-white' : ''}}">Search Employee Directory</h2>
           		<div class="mb-5">
           			<form class="d-block" action="{{ route('search_directory_path') }}" method="POST">
                   @csrf
           				<div class="form-row mb-3">
-          					<div class="col-3">
+          					<div class="col-md-3">
           						<input type="text" name="employeename" class="form-control form-sz-lg" placeholder="Employee Name">
           					</div>
-                    <div class="col-3">
+                    <div class="col-md-3">
                       <input type="text" name="flexcube" class="form-control form-sz-lg" placeholder="Flexcube ID">
                     </div>
-          					<div class="col-3">
+          					<div class="col-md-3">
           						<select name="department" class="form-control form-sz-lg">
           							<option selected="selected" value="0">Select Department</option>
                         @foreach($departments as $d)
@@ -53,7 +53,7 @@
                         @endforeach
           						</select>
           					</div>
-          					<div class="col-3">
+          					<div class="col-md-3">
           						<select name="location" class="form-control form-sz-lg">
           							<option selected="selected" value="0">Select Location</option>
           						  @foreach($locations as $l)
@@ -70,7 +70,7 @@
           			</form>
           		</div>
           		<div>
-          			<p class="search-notification">
+          			<p class="search-notification {{$no == 1 ? 'text-white' : ''}}">
           				<i class="far fa-bell fa-fw fa-2x"></i>Notification : 
           				<br>
           				Keeping all the above fields blank will view all the employees.

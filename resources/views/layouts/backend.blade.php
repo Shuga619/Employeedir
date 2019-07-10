@@ -209,6 +209,7 @@
     <!-- Page level custom scripts -->
     <script src="{{ asset('js/demo/datatables-demo.js')}}"></script>
     <script src="{{ asset('js/alert.js')}}"></script>
+    <script src="{{ asset('js/tooltip.js')}}"></script>
 
 </body>
 </html>

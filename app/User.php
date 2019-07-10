@@ -27,4 +27,12 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    /**
+    * associated user with cases
+    */ 
+    public function cases()
+    {
+        return $this->hasMany('App\CaseDetail');
+    }
 }

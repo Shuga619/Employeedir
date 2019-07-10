@@ -17,7 +17,7 @@ class Employee extends Model
 
     public function contact()
     {
-    	return $this->hasOne('App\Contact', 'employee_id','id');
+    	return $this->hasOne('App\Contact');
     }
 
     public function signin()

@@ -6,7 +6,7 @@
         	<!-- Nested Row within Card Body -->
         	<div class="row">
           		<div class="col-lg-5 d-none d-lg-block">
-                <img src='{{ asset("storage/employee_images/$employee->image") }}' class="rounded mx-auto d-block align-middle" style="max-width:350px; position: sticky; top:100px;">   
+                <img src='{{ asset("storage/employee_images/$employee->image") }}' class="rounded mx-auto d-block align-middle" style="max-width:350px; position: sticky; top:100px;" id="prev">   
               </div>
           		<div class="col-lg-7">
             		<div class="p-5">
@@ -73,7 +73,7 @@
                 			<div class="form-group row">
                   				<div class="col-sm-6 mb-3 mb-sm-0">
                             <small>Mobile Number</small>
-                    				<input type="text" class="form-control form-control-user" placeholder="Mobile Number" name="mobile" value="{{ $employee->contact->mobile }}" required>
+                    				<input type="text" class="form-control form-control-user" placeholder="Mobile Number" name="mobile" value="{{ $employee->contact->mobile }}">
                   				</div>
                 			</div>
                       <hr>
@@ -84,7 +84,7 @@
                             <input type="hidden" name="olocation" value="{{ $employee->contact->location->id }}">
                           </div>
 
-                          <div class="col-sm-12 mb-3 mb-sm-0">
+                          <div class="col-sm-12 mb-3 mb-3">
                             <small>Select New Location only if you wish to change the current Location:</small>
                             <select class="form-control" name="location" required>
                                 <option selected="selected" value="0">Select Employee's Office Location</option>
@@ -94,6 +94,11 @@
                             </select>
                           </div>
                       </div>
+                      <div class="form-group"> 
+                          <small>Employee Image</small> 
+                          <br>
+                          <input type="file" name="profile" onchange="showMyImage(this)">
+                      </div>  
                       <hr>
                       <button type="submit" href="login.html" class="btn btn-primary btn-user btn-block">
                           Update Contact Information

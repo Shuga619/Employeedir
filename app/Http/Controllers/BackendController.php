@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Department;
 use App\Location;
+use App\User;
 use Auth;
 use App\Employee;
 
@@ -17,7 +18,10 @@ class BackendController extends Controller
 
     public function index(){
     	$user = Auth::user();
-    	return view('backend.index',compact('user'));
+        $admins = User::all();
+        $contacts = Employee::count();
+        $conts = Employee::orderBy('id','DESC')->limit(5)->get();
+    	return view('backend.index',compact('user','admins','contacts','conts'));
     }
 
     public function directory(){
