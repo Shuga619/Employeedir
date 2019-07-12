@@ -52,13 +52,11 @@
                       <td>{{ $employee->contact->extension }}</td>
                       <td class="text-center">
                         <div class="btn-group">
-                          <a href="{{ route('edit_contact_path', $employee->id) }}" class="btn btn-primary btn-sm">
+                          <a href="{{ route('edit_contact_path', $employee->id) }}" class="btn btn-primary btn-sm" data-toggle="tooltip" title="Edit {{ $employee->name }}'s Information">
                             <i class="far fa-edit"></i>
-                            Edit
                           </a>
-                          <a href="" class="btn btn-danger btn-sm">
+                          <a href="" class="btn btn-danger btn-sm" data-toggle="tooltip" title="Delete {{ $employee->name }}'s Information">
                             <i class="far fa-trash-alt"></i>
-                            Delete
                           </a>
                         </div>
                       </td>

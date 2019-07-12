@@ -87,6 +87,7 @@ class ContactController extends Controller
     	$status = '1';
         $employee = Employee::find($request->id);
         $contact = $employee->contact;
+
         if(!blank($employee))
         {
             $name = $request->name;
@@ -96,7 +97,10 @@ class ContactController extends Controller
             if (!blank($request->profile)){
                 $profile = time()."-".request()->file('profile')->getClientOriginalName();
                 request()->file('profile')->storeAs('public/employee_images',$profile);
-                Storage::delete("public/employee_images/$employee->image");
+                if(Storage::exists("public/employee_images/$employee->image"))
+                {
+                    Storage::delete("public/employee_images/$employee->image");
+                }
             }
             else{
                 $profile = $employee->image;

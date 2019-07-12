@@ -107,7 +107,7 @@
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
                     </button>
-                    <h3><b class="text-primary">Bhutan National Bank Limited</b> <b class="text-warning">Employee Directory Manager</b></h3>
+                    <h3 style="font-family: century gothic;"><b class="text-primary">Bhutan National Bank Limited</b> <b class="text-warning">Employee Directory Manager</b></h3>
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <div class="topbar-divider d-none d-sm-block"></div>
