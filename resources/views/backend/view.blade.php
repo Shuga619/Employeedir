@@ -63,9 +63,18 @@
                     </div>
                   </div>
                   <hr>
-                  <a href="{{ route('edit_contact_path', $employee->id) }}" class="btn btn-primary btn-block">
-                    Edit Contact Information
-                  </a>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <a href="{{ route('edit_contact_path', $employee->id) }}" class="btn btn-primary btn-block">
+                        <i class="far fa-edit"></i> Edit Contact Information
+                      </a>
+                    </div>  
+                    <div class="col-md-6">
+                      <a href="{{ route('delete_contact_path',$employee->id) }}" class="btn btn-danger float-right" data-toggle="tooltip" title="Delete {{ $employee->name }}'s Information" onclick="return confirm('You are about to delete Contact Inforamtion of {{$employee->name}}. Are you sure you want to delete the Contact Details?')">
+                            <i class="far fa-trash-alt"></i> Delete Contact
+                          </a>
+                    </div>  
+                  </div>
             		</div>
           		</div>
         	</div>
