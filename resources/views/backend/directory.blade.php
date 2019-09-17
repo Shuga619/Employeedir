@@ -55,7 +55,7 @@
                           <a href="{{ route('edit_contact_path', $employee->id) }}" class="btn btn-primary btn-sm" data-toggle="tooltip" title="Edit {{ $employee->name }}'s Information">
                             <i class="far fa-edit"></i>
                           </a>
-                          <a href="" class="btn btn-danger btn-sm" data-toggle="tooltip" title="Delete {{ $employee->name }}'s Information">
+                          <a href="{{ route('delete_contact_path',$employee->id) }}" class="btn btn-danger btn-sm" data-toggle="tooltip" title="Delete {{ $employee->name }}'s Information" onclick="return confirm('You are about to delete Contact Inforamtion of {{$employee->name}}. Are you sure you want to delete the Contact Details?')">
                             <i class="far fa-trash-alt"></i>
                           </a>
                         </div>

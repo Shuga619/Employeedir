@@ -54,22 +54,22 @@
                 <a href="#" class="mb-3">
               			<i class="fas fa-phone"></i> 
             		</a>
-            		<h3>Extension : {{ $record->contact->extension }}</h3>
+            		<h3>Extension : {{ blank($record->contact->extension) ? "Information Unavailable" : $record->contact->extension }}</h3>
             		<br>
             		<a href="#" class="mb-3">
               			<i class="fas fa-mobile"></i>
             		</a>
-            		<h3>Mobile Number : {{ $record->contact->mobile }}</h3>
+            		<h3>Mobile Number : {{ blank($record->contact->mobile) ? "Information Unavailable" : $record->contact->mobile }}</h3>
             		<br>
             		<a href="#" class="mb-3">
               			<i class="fas fa-envelope-open"></i>
             		</a>
-            		<h3>Email ID : <span class="text-bnb-blue lowercase">{{ $record->contact->email }}</span></h3>
+            		<h3>Email ID : <span class="text-bnb-blue lowercase">{{ blank($record->contact->email) ? "Information Unavailable" : $record->contact->email }}</span></h3>
             		<br>
             		<a href="#" class="mb-3">
               			<i class="fas fa-user-shield"></i>
             		</a>
-            		<h3>Flexcube User ID : <span class="text-bnb-blue no-case"> {{ $record->contact->flexcube }}</span></h3>
+            		<h3>Flexcube User ID : <span class="text-bnb-blue no-case"> {{ blank($record->contact->flexcube) ? "Information Unavailable" : $record->contact->flexcube }}</span></h3>
             		<br>
             		<a href="#">
               			<i class="fas fa-map-marker-alt"></i>
@@ -77,7 +77,7 @@
             		<h3>Location : {{ $record->contact->location->name }}</h3>
           		</div>
           		<br>
-          		<small>If any information is invalid, Please contact your Branch IT or call at 1277.</small>
+          		<small>If your information is invalid, Please click <a href="{{ route('login_info_path') }}">HERE</a> to edit your information or contact System Administrator at 1277 | 1265.</small>
         	</div>
       	</section>
     </div>

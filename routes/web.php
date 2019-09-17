@@ -70,3 +70,4 @@ Route::get('BNBLEmployeeDirectory/{id}/view', 'ContactController@viewContact')->
 Route::get('/BNBLEmployeeDirectory/{id}/edit-contact', 'ContactController@editContact')->name('edit_contact_path');
 Route::post('/BNBLEmployeeDirectory/update-contact', 'ContactController@updateContact')->name('update_contact_path');
 Route::post('BNBLEmployeeDirectory/bulkupload', 'ContactController@bulkUpload')->name('bulkupload_to_contact_path');
+Route::get('BNBLEmployeeDirectory/{id}/delete/', 'ContactController@deleteContact')->name('delete_contact_path');

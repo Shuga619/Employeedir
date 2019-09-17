@@ -196,4 +196,34 @@ class ContactController extends Controller
     		}
     	return back()->with(['status'=>$status,'msg'=>$msg]);
     }
+
+    /**
+    * Function to delete contact 
+    * @param $request
+    */ 
+    public function deleteContact(Request $request)
+    {
+        $status = '1';
+        $employee = Employee::find($request->id);
+        if(blank($employee))
+        {
+            $status = '0';
+            $msg = "No Employee found matching the provided ID.";
+        }
+        else
+        {
+            if($employee->delete())
+            {
+                Storage::delete("public/employee_images/$employee->image");
+                $msg = "Employee has been Deleted from the Contact."; 
+            }
+            else
+            {
+                $status = '0';
+                $msg = "Employee Couldnot be deleted. Please Try Again.";
+            }
+
+        }
+        return redirect()->route('directory_path')->with(['status'=>$status, 'msg'=>$msg]);
+    }
 }

@@ -117,6 +117,6 @@ class DirectoryController extends Controller
         $param_name = $request->employeename;
         $param_location = $request->location;
         $param_department = $request->department;
-        return view('frontend.result',compact('no','stat','records','request_params','param_name','param_department','param_location'));
+        return view('frontend.result',compact('no','stat','records','param_name','param_department','param_location'));
     }
 }
