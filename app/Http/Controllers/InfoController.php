@@ -8,6 +8,7 @@ use App\Contact;
 use App\Department;
 use App\Location;
 use App\Mail\SendOTP;
+use App\ContactRequest;
 use App\Signin;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Mail;
@@ -180,5 +181,53 @@ class InfoController extends Controller
             $msg = "Contact Information of $request->name has not been modified. Changes were discarded.";
             return redirect()->route('get_search_path')->with(['status'=>$status,'msg'=>$msg]);
         }
+    }
+
+    /**
+    * function renders the registration page
+    * @return view
+    */ 
+    public function getRegistration(){
+        $no = rand(10,30)%2;
+        $record = Employee::find(6);
+        $location = Location::orderBy('name')->get();
+        $department = Department::orderBy('name')->get();
+        return view('frontend.edit.register',compact('no','location','department','record'));
+    }
+
+    /**
+    * function to send contact addition request
+    * @param $request
+    * @return redirect
+    */ 
+    public function sendAdditionRequest(Request $request){
+        // $request->validate([
+        //     ''
+        // ]);
+        $image = time()."-".request()->file('profile')->getClientOriginalName();
+        $newcontact = new ContactRequest;
+        $newcontact->name = $request->name;
+        $newcontact->designation = $request->designation;
+        $newcontact->title = $request->title;
+        $newcontact->department_id = $request->department;
+        $newcontact->employee_id = $request->empid;
+        $newcontact->image = $image;
+        $newcontact->email = $request->email;
+        $newcontact->mobile = $request->mobile;
+        $newcontact->extension = $request->extension;
+        $newcontact->flexcube = $request->flexcube;
+        $newcontact->location_id = $request->location;
+        
+        if($newcontact->save())
+        {
+            request()->file('profile')->storeAs('public/employee_images',$image);
+            $msg = "Contact Details has been submitted for Approval.";
+            $status = '1';
+        }
+        else
+        {
+            $msg = "Contact Details could not be submitted for Approval. Please check your information.";
+        }
+        return redirect()->route('get_search_path')->with(['status'=>$status,'msg'=>$msg]);
     }
 }

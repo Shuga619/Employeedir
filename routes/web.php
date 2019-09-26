@@ -46,7 +46,7 @@ Route::get('/DOA/strategy-and-information-technology-vertical', 'DOAController@s
 
 /*
 |----------------------------------------------------------------------------------
-| Routes for Employee Login
+| Routes for Employee Information Edit
 |----------------------------------------------------------------------------------
 */ 
 Route::get('/BNBLEmployeeDirectory/edit', 'InfoController@getEmployee')->name('login_info_path');
@@ -55,6 +55,13 @@ Route::get('/BNBLEmployeeDirectory/edit/{eid}/info', 'InfoController@getEditForm
 Route::post('/BNBLEmployeeDirectory/otp-verification', 'InfoController@sendOTP')->name('get_employee_and_send_otp_path');
 Route::post('BNBLEmployeeDirectory/verify_otp', 'InfoController@verifyOTP')->name('verify_otp_path');
 Route::post('BNBLEmployeeDirectory/update-employee-info', 'InfoController@updateInfo')->name('update_employee_info_path');
+/*
+|----------------------------------------------------------------------------------
+|Routes for Employee Registration
+|----------------------------------------------------------------------------------
+*/ 
+Route::get('BNBLEmployeeDirectory/registration', 'InfoController@getRegistration')->name('employee_registration_path');
+Route::post('BNBLEmployeeDirectory/registration', 'InfoController@sendAdditionRequest')->name('contact_addition_request_path');
 /*
 |----------------------------------------------------------------------------------
 | Routes for Administrator
@@ -71,3 +78,6 @@ Route::get('/BNBLEmployeeDirectory/{id}/edit-contact', 'ContactController@editCo
 Route::post('/BNBLEmployeeDirectory/update-contact', 'ContactController@updateContact')->name('update_contact_path');
 Route::post('BNBLEmployeeDirectory/bulkupload', 'ContactController@bulkUpload')->name('bulkupload_to_contact_path');
 Route::get('BNBLEmployeeDirectory/{id}/delete/', 'ContactController@deleteContact')->name('delete_contact_path');
+
+Route::get('BNBLEmployeeDirectory/contact-addition-requests', 'ContactController@contactRequests')->name('view_contact_request_path');
+Route::post('BNBLEmployeeDirectory/approve-contact', 'ContactController@approveContact')->name('approve_contact_path');

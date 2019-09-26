@@ -8,6 +8,7 @@ use App\Department;
 use App\Location;
 use App\Contact;
 use App\Signin;
+use App\ContactRequest;
 use Auth;
 use Storage;
 
@@ -225,5 +226,80 @@ class ContactController extends Controller
 
         }
         return redirect()->route('directory_path')->with(['status'=>$status, 'msg'=>$msg]);
+    }
+
+    /**
+    * function views contact addition request
+    * @return view
+    */ 
+    public function contactRequests(){
+        $contacts = ContactRequest::orderBy('created_at','DESC')->get();
+        $user = Auth::user();
+        return view('backend.contactrequest',compact('user','contacts'));
+    }
+
+
+    /**
+    * function Approve Contact
+    * @param $request
+    * @return view
+    */ 
+    public function approveContact(Request $request){
+        // return $request->all();
+        $status = '0';
+        if($request->submit_type == 'approve')
+        {
+            $name = $request->name;
+            $designation = $request->designation;
+            $title = $request->title;
+            $department = $request->department;
+            $extension = $request->extension;
+            $flexcube = $request->flexcube;
+            $email = $request->email;
+            $mobile = $request->mobile;
+            $location = $request->location;
+            $employee_id = $request->employee_id;
+            $image = $request->image;
+            
+            $employee = new Employee;
+            $contact = new Contact;
+            $signin = new Signin;
+            $employee->name = $name;
+            $employee->designation = $designation;
+            $employee->title = $title;
+            $employee->department_id = $department;
+            $employee->employee_id =$employee_id;
+            $employee->image = $image;
+            if($employee->save())
+            {
+                $contact->email = $email;
+                $contact->mobile = $mobile;
+                $contact->extension = $extension;
+                $contact->flexcube = $flexcube;
+                $contact->location_id = $location;
+                $contact->employee_id = $employee->id;
+                if($contact->save())
+                {
+                    $signin->employee_id = $employee->id;
+                    $signin->save();
+                    $status = '1';
+                    $msg = 'Employee Information has been added to Contact.';
+                    $remove = ContactRequest::find($request->id);
+                    $remove->delete();
+                }
+                else
+                    $msg = 'Contact Information couldnot be saved.';
+            }
+            else
+                $msg = 'Employee Information couldnot be saved.';
+        }
+        else
+        {
+            $remove = ContactRequest::find($request->id);
+            $remove->delete();
+            $msg = "Contact Request has been rejected.";
+            
+        }
+        return back()->with(['status'=>$status,'msg'=>$msg]);
     }
 }

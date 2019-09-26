@@ -64,20 +64,20 @@
             </li>
 
             <!-- Divider -->
-            <!-- <hr class="sidebar-divider"> -->
+            <hr class="sidebar-divider">
 
             <!-- Heading -->
-            <!-- <div class="sidebar-heading">
-                DOA Controls
-            </div> -->
+            <div class="sidebar-heading">
+                Contact Addition Requests
+            </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
-            <!-- <li class="nav-item">
-                <a class="nav-link collapsed" href="#">
-                    <i class="fas fa-sitemap fa-fw"></i>
-                    <span>View DOA</span>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="{{ route('view_contact_request_path') }}">
+                    <i class="fas fa-list-alt fa-fw"></i>
+                    <span>View Contact Requests</span>
                 </a>
-            </li> -->
+            </li>
 
             <!-- Nav Item - Charts -->
             <!-- <li class="nav-item">

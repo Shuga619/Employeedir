@@ -64,7 +64,7 @@
           				</div>
           				<div class="form-row">
           					<div class="col-md-12">
-          						<button type="submit" class="btn {{$no == 1 ? 'bg-bnb-orange' : 'bg-bnb-blue'}} btn-block btn-lg text-white">Search Directory</button>
+          						<button type="submit" class="btn {{$no == 1 ? 'bg-bnb-orange' : 'bg-bnb-blue'}} btn-block btn-lg text-white"><i class="fas fa-search"></i> Search Directory</button>
           					</div>
           				</div>
           			</form>
@@ -78,7 +78,14 @@
           				Keeping one or two above fields blank will ignore the blank fields.
           			  <br>
                   <br>
-                  <a href="{{ route('login_info_path') }}" class="btn {{$no == 1 ? 'bg-bnb-orange' : 'bg-bnb-blue'}} btn-sm text-white">Edit your Information</a>
+                  <div class="row">
+                    <div class="col-md-3">
+                      <a href="{{ route('login_info_path') }}" class="btn {{$no == 1 ? 'bg-bnb-orange' : 'bg-bnb-blue'}} btn-sm text-white"><b><i class="fas fa-user-edit"></i> Edit your Information</b></a>
+                    </div>
+                    <div class="col-md-3">
+                      <a href="{{ route('employee_registration_path') }}" class="btn {{$no == 1 ? 'bg-bnb-orange' : 'bg-bnb-blue'}} btn-sm text-white"><b> <i class="fas fa-user-plus"></i> Register your Information</b></a>
+                    </div>
+                  </div>
                 </p>
           		</div>
         	</div>
