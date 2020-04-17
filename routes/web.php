@@ -62,6 +62,15 @@ Route::post('BNBLEmployeeDirectory/update-employee-info', 'InfoController@update
 */ 
 Route::get('BNBLEmployeeDirectory/registration', 'InfoController@getRegistration')->name('employee_registration_path');
 Route::post('BNBLEmployeeDirectory/registration', 'InfoController@sendAdditionRequest')->name('contact_addition_request_path');
+
+/*
+|----------------------------------------------------------------------------------
+| Routes for Mail Signature Generator
+|----------------------------------------------------------------------------------
+*/ 
+Route::get('MailSignatureGenerator/search','SignatureController@getSearch')->name('sign_index_path');
+Route::post('MailSignatureGenerator/generate-sign', 'SignatureController@searchDirectory')->name('sign_search_directory_path');
+
 /*
 |----------------------------------------------------------------------------------
 | Routes for Administrator

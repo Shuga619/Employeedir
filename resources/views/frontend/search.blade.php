@@ -85,6 +85,9 @@
                     <div class="col-md-3">
                       <a href="{{ route('employee_registration_path') }}" class="btn {{$no == 1 ? 'bg-bnb-orange' : 'bg-bnb-blue'}} btn-sm text-white"><b> <i class="fas fa-user-plus"></i> Register your Information</b></a>
                     </div>
+                    <div class="col-md-3">
+                      <a href="{{ route('sign_index_path') }}" class="btn {{$no == 1 ? 'bg-bnb-orange' : 'bg-bnb-blue'}} btn-sm text-white"><b> <i class="fas fa-signature"></i> Generate Mail Signature</b></a>
+                    </div>
                   </div>
                 </p>
           		</div>
