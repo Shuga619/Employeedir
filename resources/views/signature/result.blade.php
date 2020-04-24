@@ -55,7 +55,9 @@
 </tbody>
 </table>
 <div>
-<p style="margin: 0px;"><span style="font-family: 'Century Gothic', sans-serif; font-size: 9pt; color: #808080;">The content of this email is confidential and intended for the recipient specified in message only. It is strictly forbidden to share any part of this message with any third party, without a written consent of the sender. If you received this message by mistake, please reply to this message and follow with its deletion, so that we can ensure such a mistake does not occur in the future.</span></p>
+<p style="margin: 0px;"><span style="font-family: 'Century Gothic', sans-serif; font-size: 9pt; color: #808080;"><i>The contents of this e-mail and any attachment(s) are confidential and intended for the named recipient(s) only. Any form of reproduction, dissemination, copying, disclosure, modification, distribution and/or publication of this message without the prior written consent of the author of this e-mail is strictly prohibited. If you have received this email in error please delete it and notify the sender immediately, so that we can ensure such a mistake does not occur in the future. 
+Before opening any mail and attachments please check them for viruses and defects. Any views or opinions presented in this email are solely those of the author and may not necessarily reflect the opinions of BNBL.
+</i></span></p>
 </div>
 </div></textarea>
                       <p class="text-white small"> Copy the above code and paste it in your mail signature setting.</p>
