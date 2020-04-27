@@ -39,25 +39,42 @@
           			@if($flag)
                   <div class="row">
                     <div class="col-md-9">
-                      <textarea class="form-control" rows="10"><div>Thank you &amp; have a pleasant day,</div>
-<div><span style="font-family: tahoma, 'new york', times, serif;">Best regards,</span></div>
+                      <textarea class="form-control" rows="10"><div>
+<span style="font-family: 'Century Gothic', sans-serif; color: black; font-size: 10pt; margin: 0px; line-height: 115%;">
+Thank you &amp; have a pleasant day. <br/>
+Best regards,
+</span>
+</div>
 <div>
-<table style="table-layout: fixed; height: 200px; width: 600px;">
+<table style="table-layout: fixed; height: 190px; width: 600px;">
 <tbody>
 <tr>
 <td>
-<p style="margin: 0px; line-height: 115%;"><strong><span style="font-size: 13.0pt; line-height: 115%; font-family: 'Century Gothic',sans-serif; color: black;">{{$emp->name}} </span></strong><span style="font-size: 8.5pt; line-height: 115%; font-family: 'Century Gothic',sans-serif; color: black;"><br /> </span><span style="font-size: 11pt;"><span style="line-height: 115%; font-family: 'Century Gothic', sans-serif; color: black;">{{$emp->title}} [{{$emp->designation}}]</span><span style="line-height: 115%; font-family: 'Century Gothic', sans-serif; color: black;"><br /> </span><span style="line-height: 115%; font-family: 'Century Gothic', sans-serif; color: black;">{{$emp->department->name}} Department</span></span></p>
-<p style="margin: 0px; line-height: 115%;"><span style="font-size: 8.5pt; line-height: 115%; font-family: 'Verdana',sans-serif; color: black;">&nbsp;</span></p>
-<p style="line-height: 115%; margin: 0px;"><span style="font-size: 13pt;"><strong><span style="line-height: 115%; font-family: 'Raleway ExtraBold', sans-serif; color: black;">BHUTAN NATIONAL BANK LIMITED</span></strong></span><span style="font-size: 8.5pt; line-height: 115%; font-family: 'Verdana',sans-serif; color: black;"><br /> </span><span style="font-size: 11pt;"><strong><span style="line-height: 115%; font-family: 'Century Gothic', sans-serif; color: black;">M :</span></strong><span style="line-height: 115%; font-family: 'Century Gothic', sans-serif; color: black;">&nbsp;+975 {{$emp->contact->mobile}}&nbsp;|&nbsp;<strong>IP :</strong>&nbsp;{{$emp->contact->extension}}</span><span style="line-height: 115%; font-family: 'Century Gothic', sans-serif; color: black;"><br /> </span><strong><span style="line-height: 115%; font-family: 'Century Gothic', sans-serif; color: black;">T :</span></strong><span style="line-height: 115%; font-family: 'Century Gothic', sans-serif; color: black;">&nbsp;+975 Your Landline Number</span><span style="line-height: 115%; font-family: 'Century Gothic', sans-serif; color: black;"><br /> </span><span style="line-height: 115%; font-family: 'Century Gothic', sans-serif; color: black;">{{$office}}: Post Box No: 439</span><span style="line-height: 115%; font-family: 'Century Gothic', sans-serif; color: black;"><br /> </span><span style="line-height: 115%; font-family: 'Century Gothic', sans-serif; color: black;">{{$loc}} | Kingdom of Bhutan</span></span></p>
+<p>
+<span style="font-family: 'Century Gothic', sans-serif; color: black; font-size: 12pt; margin: 0px; line-height: 115%;"><b> {{$emp->name}} </b> (Mr. / Ms.)</span><br/>	
+<span style="font-family: 'Century Gothic', sans-serif; color: black; font-size: 10pt; margin: 0px; line-height: 115%;">
+{{$emp->title}} [ {{$emp->designation}} ] <br/>
+{{$emp->department->name}} Department
+</span><br/>
+<span style="font-family: 'Century Gothic', sans-serif; color: black; font-size: 12pt; margin: 0px; line-height: 115%;">
+<b style="font-family: 'Raleway ExtraBold', sans-serif;">BHUTAN NATIONAL BANK LIMITED</b>
+</span><br/>
+<span style="font-family: 'Century Gothic', sans-serif; color: black; font-size: 10pt; margin: 0px; line-height: 115%;">
+<b>M : </b> +975 {{$emp->contact->mobile}} &nbsp; | &nbsp; <b>IP : </b> {{$emp->contact->extension}} <br/>
+<b>T : </b> + 957 Your Landline Number Here <br/>
+{{$office}} : Post Box No: 439 <br/>
+Thimphu | Kingdom of Bhutan 
+</span>
+</p>
 </td>
-<td><a href="https://www.bnb.bt" target="_blank"><img src="/home/{{$emp->contact->email}}/Briefcase/BNB-email-signature.png" dfsrc="doc:Briefcase/BNB-email-signature.png" width="220" height="175" /></a></td>
+<td>
+<a href="https://www.bnb.bt" target="_blank"><img src="/home/{{$emp->contact->email}}/Briefcase/BNB-email-signature.png" dfsrc="doc:Briefcase/BNB-email-signature.png" width="200" height="159" /></a>
+</td>
 </tr>
 </tbody>
 </table>
 <div>
-<p style="margin: 0px;"><span style="font-family: 'Century Gothic', sans-serif; font-size: 9pt; color: #808080;"><i>The contents of this e-mail and any attachment(s) are confidential and intended for the named recipient(s) only. Any form of reproduction, dissemination, copying, disclosure, modification, distribution and/or publication of this message without the prior written consent of the author of this e-mail is strictly prohibited. If you have received this email in error please delete it and notify the sender immediately, so that we can ensure such a mistake does not occur in the future. 
-Before opening any mail and attachments please check them for viruses and defects. Any views or opinions presented in this email are solely those of the author and may not necessarily reflect the opinions of BNBL.
-</i></span></p>
+<p style="margin: 0px; font-family: 'Century Gothic', sans-serif; font-size: 8.5pt; color: #808080;">The contents of this e-mail and any attachment(s) are confidential and intended for the named recipient(s) only. Any form of reproduction, dissemination, copying, disclosure, modification, distribution and/or publication of this message without the prior written consent of the author of this e-mail is strictly prohibited. If you have received this email in error please delete it and notify the sender immediately, so that we can ensure such a mistake does not occur in the future. Before opening any mail and attachments please check them for viruses and defects. Any views or opinions presented in this email are solely those of the author and may not necessarily reflect the opinions of BNBL.</span></p>
 </div>
 </div></textarea>
                       <p class="text-white small"> Copy the above code and paste it in your mail signature setting.</p>
