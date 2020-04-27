@@ -55,7 +55,7 @@ Best regards,
 <span style="font-family: 'Century Gothic', sans-serif; color: black; font-size: 10pt; margin: 0px; line-height: 115%;">
 {{$emp->title}} [ {{$emp->designation}} ] <br/>
 {{$emp->department->name}} Department
-</span><br/>
+</span><br/><br/>
 <span style="font-family: 'Century Gothic', sans-serif; color: black; font-size: 12pt; margin: 0px; line-height: 115%;">
 <b style="font-family: 'Raleway ExtraBold', sans-serif;">BHUTAN NATIONAL BANK LIMITED</b>
 </span><br/>
