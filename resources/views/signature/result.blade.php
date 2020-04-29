@@ -51,9 +51,9 @@ Best regards,
 <tr>
 <td>
 <p>
-<span style="font-family: 'Century Gothic', sans-serif; color: black; font-size: 12pt; margin: 0px; line-height: 115%;"><b> {{$emp->name}} </b> (Mr. / Ms.)</span><br/>	
+<span style="font-family: 'Century Gothic', sans-serif; color: black; font-size: 12pt; margin: 0px; line-height: 115%;"><b> {{$emp->name}} </b></span><br/>	
 <span style="font-family: 'Century Gothic', sans-serif; color: black; font-size: 10pt; margin: 0px; line-height: 115%;">
-{{$emp->title}} [ {{$emp->designation}} ] <br/>
+{{$emp->title}} <br/>
 {{$emp->department->name}} Department
 </span><br/><br/>
 <span style="font-family: 'Century Gothic', sans-serif; color: black; font-size: 12pt; margin: 0px; line-height: 115%;">
@@ -61,7 +61,6 @@ Best regards,
 </span><br/>
 <span style="font-family: 'Century Gothic', sans-serif; color: black; font-size: 10pt; margin: 0px; line-height: 115%;">
 <b>M : </b> +975 {{$emp->contact->mobile}} &nbsp; | &nbsp; <b>IP : </b> {{$emp->contact->extension}} <br/>
-<b>T : </b> + 957 Your Landline Number Here <br/>
 {{$office}} : Post Box No: 439 <br/>
 Thimphu | Kingdom of Bhutan 
 </span>
