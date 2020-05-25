@@ -53,7 +53,7 @@ Thank you, &amp; Best regards.
 <div style="float: left;">
 <span style="font-size: 11pt; font-family: 'Raleway ExtraBold', sans-serif; color: black; line-height: 1.5;">
 <strong>BHUTAN NATIONAL BANK LIMITED</strong></span><br>
-<span style="font-size: 10pt; font-family: 'Century Gothic', sans-serif; color: black; line-height: 1.2;">
+<span style="font-size: 10pt; font-family: 'Century Gothic', sans-serif; color: black; line-height: 1.3;">
 @if(!blank($telephone))
 <strong>T :</strong>&nbsp;{{$telephone}}&nbsp; | 
 @endif
