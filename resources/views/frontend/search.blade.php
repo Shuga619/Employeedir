@@ -79,14 +79,14 @@
           			  <br>
                   <br>
                   <div class="row">
-                    <div class="col-md-3">
-                      <a href="{{ route('login_info_path') }}" class="btn {{$no == 1 ? 'bg-bnb-orange' : 'bg-bnb-blue'}} btn-sm text-white"><b><i class="fas fa-user-edit"></i> Edit your Information</b></a>
+                    <div class="col-md-4">
+                      <a href="{{ route('login_info_path') }}" class="btn {{$no == 1 ? 'bg-bnb-orange' : 'bg-bnb-blue'}} btn-sm text-white btn-block"><b><i class="fas fa-user-edit"></i> Edit your Information</b></a>
                     </div>
-                    <div class="col-md-3">
-                      <a href="{{ route('employee_registration_path') }}" class="btn {{$no == 1 ? 'bg-bnb-orange' : 'bg-bnb-blue'}} btn-sm text-white"><b> <i class="fas fa-user-plus"></i> Register your Information</b></a>
+                    <div class="col-md-4">
+                      <a href="{{ route('employee_registration_path') }}" class="btn {{$no == 1 ? 'bg-bnb-orange' : 'bg-bnb-blue'}} btn-sm text-white btn-block"><b> <i class="fas fa-user-plus"></i> Register your Information</b></a>
                     </div>
-                    <div class="col-md-3">
-                      <a href="{{ route('sign_index_path') }}" class="btn {{$no == 1 ? 'bg-bnb-orange' : 'bg-bnb-blue'}} btn-sm text-white"><b> <i class="fas fa-signature"></i> Generate Mail Signature</b></a>
+                    <div class="col-md-4">
+                      <a href="{{ route('sign_index_path') }}" class="btn {{$no == 1 ? 'bg-bnb-orange' : 'bg-bnb-blue'}} btn-sm text-white btn-block"><b> <i class="fas fa-signature"></i> Generate Mail Signature</b></a>
                     </div>
                   </div>
                 </p>
