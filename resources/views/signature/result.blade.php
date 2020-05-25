@@ -52,7 +52,7 @@ Thank you, &amp; Best regards.
 <div style="max-width: 400px; padding: 0px; margin-top: 12px; margin-bottom: 10px; display: inline-flex;">
 <div style="float: left;">
 <span style="font-size: 11pt; font-family: 'Raleway ExtraBold', sans-serif; color: black; line-height: 1.5;">
-<strong>BHUTAN NATIONAL BANK LIMITED</strong></span><br>
+<strong>BHUTAN NATIONAL BANK LTD.</strong></span><br>
 <span style="font-size: 10pt; font-family: 'Century Gothic', sans-serif; color: black; line-height: 1.3;">
 @if(!blank($telephone))
 <strong>T :</strong>&nbsp;{{$telephone}}&nbsp; | 

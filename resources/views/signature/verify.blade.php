@@ -68,7 +68,7 @@
                               <div style="max-width: 500px; padding: 0px; margin-top: 12px; margin-bottom: 10px; display: inline-flex;">
                                 <div style="float: left;">
                                   <span style="font-size: 11pt; font-family: 'Raleway ExtraBold', sans-serif; color: black; line-height: 1.6;">
-                                    <strong>BHUTAN NATIONAL BANK LIMITED</strong>
+                                    <strong>BHUTAN NATIONAL BANK LTD.</strong>
                                   </span><br>
                                   <span style="font-size: 10pt; font-family: 'Century Gothic', sans-serif; color: black; line-height: 1;">
                                     <strong>T :</strong>&nbsp;<input type="text" name="telephone" placeholder="Landline Number"> | <strong>IP :</strong>&nbsp;{{$emp->contact->extension}}<br />
