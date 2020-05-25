@@ -44,7 +44,7 @@ Thank you, &amp; Best regards.
 </div>
 <div style= "font-family: 'Century Gothic', sans-serif; color: black; line-height: 1.2;">
 <span style="font-size: 11pt;">
-<strong>{{$emp->name}} @if(!blank($salutation)) ({{ $salutation }}) @endif</strong><br />
+<strong>{{$emp->name}}</strong> &nbsp; @if(!blank($salutation)) ({{ $salutation }}) @endif<br />
 <span style="font-size: 10pt;">
 {{$emp->title}}<br />
 {{$emp->department->name}} Department</span>

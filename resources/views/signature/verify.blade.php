@@ -51,13 +51,12 @@
                               <div style= "font-family: 'Century Gothic', sans-serif; color: black; line-height: 1.2;">
                                 <span style="font-size: 11pt;">
                                   <strong>
-                                    {{$emp->name}} &nbsp; (<select name="salutation">
-                                      <option value="">salutation</option>
+                                    {{$emp->name}} </strong> &nbsp; (<select name="salutation">
+                                      <option value="">Salutation</option>
                                       <option>Mr.</option>
                                       <option>Ms.</option>
                                       <option>Mrs.</option>
                                     </select>)
-                                  </strong>
                                 </span><br />
                                 <span style="font-size: 10pt;">
                                   {{$emp->title}}<br />
