@@ -39,21 +39,21 @@
           			@if($flag)
                   <div class="row">
                     <div class="col-md-12">
-                      <textarea class="form-control" rows="10"><div style="font-size: 12pt; font-family: sans-serif; line-height: 1.2; margin-bottom: 12px;">
+                      <textarea class="form-control" rows="10"><div style="font-size: 12pt; font-family: sans-serif; line-height: 1.5; margin-bottom: 12px;">
 Thank you, &amp; Best regards.
 </div>
-<div style= "font-family: 'Century Gothic', sans-serif; color: black; line-height: 1.2;">
+<div style= "font-family: 'Century Gothic', sans-serif; color: black; line-height: 1.5;">
 <span style="font-size: 11pt;">
-<strong>{{$emp->name}}</strong> &nbsp; @if(!blank($salutation)) ({{ $salutation }}) @endif<br />
+<strong>{{$emp->name}}</strong> @if(!blank($salutation)) ({{ $salutation }}) @endif<br />
 <span style="font-size: 10pt;">
 {{$emp->title}}<br />
 {{$emp->department->name}} Department</span>
 </div>
 <div style="max-width: 400px; padding: 0px; margin-top: 12px; margin-bottom: 10px; display: inline-flex;">
 <div style="float: left;">
-<span style="font-size: 11pt; font-family: 'Raleway ExtraBold', sans-serif; color: black; line-height: 1.6;">
+<span style="font-size: 11pt; font-family: 'Raleway ExtraBold', sans-serif; color: black; line-height: 1.5;">
 <strong>BHUTAN NATIONAL BANK LIMITED</strong></span><br>
-<span style="font-size: 10pt; font-family: 'Century Gothic', sans-serif; color: black; line-height: 1;">
+<span style="font-size: 10pt; font-family: 'Century Gothic', sans-serif; color: black; line-height: 1.2;">
 @if(!blank($telephone))
 <strong>T :</strong>&nbsp;{{$telephone}}&nbsp; | 
 @endif

@@ -39,7 +39,7 @@
           			@if($flag)
                   <div class="row">
                     <div class="col-md-12">
-                      <p class="text-white small"><b>Check the Signature Preview below and modify the information if required. Keep the field(s) as it is, if no modification in required. All the empty fields will not be included in the Signature Code.</b></p>
+                      <p class="{{$no == 1 ? 'text-white' : 'text-black'}} small"><b>* Check the Signature Preview below and modify the information if required. Keep the field(s) as it is, if no modification in required. All the empty fields will not be included in the Signature Code.</b></p>
                       <div class="preview-container">
                         <div class="clearfix">
                           <form action="{{ route('get_signature_code_path') }}" method="GET">
