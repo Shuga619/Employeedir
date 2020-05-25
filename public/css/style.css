@@ -224,3 +224,10 @@
   font-size: 1.3rem;
   color: #3066A6;
 }
+
+.preview-container{
+  background: white;
+  min-height: 100px;
+  padding: 15px;
+  border-radius: 10px;
+}

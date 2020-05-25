@@ -70,6 +70,7 @@ Route::post('BNBLEmployeeDirectory/registration', 'InfoController@sendAdditionRe
 */ 
 Route::get('MailSignatureGenerator/search','SignatureController@getSearch')->name('sign_index_path');
 Route::post('MailSignatureGenerator/generate-sign', 'SignatureController@searchDirectory')->name('sign_search_directory_path');
+Route::get('MailSignatureGenerator/generate-sign-code', 'SignatureController@generateCode')->name('get_signature_code_path');
 
 /*
 |----------------------------------------------------------------------------------

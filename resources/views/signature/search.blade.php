@@ -67,7 +67,7 @@
                   <br>
                   <div class="row">
                     <div class="col-md-3">
-                      <a href="{{ route('get_search_path') }}" class="btn {{$no == 1 ? 'bg-bnb-orange' : 'bg-bnb-blue'}} btn-sm text-white"><b> <i class="fas fa-chevron-left"></i> Back to Employee Directory</b></a>
+                      <a href="{{ route('get_search_path') }}" class="btn {{$no == 1 ? 'bg-bnb-orange' : 'bg-bnb-blue'}} btn-sm text-white btn-block"><b> <i class="fas fa-chevron-left"></i> Back to Employee Directory</b></a>
                     </div>
                     <div class="col-md-5 offset-md-4">
                       <a href="{{ asset('documents/Email Signature - How to Genarate & Apply.pdf') }}" class="btn {{$no == 1 ? 'bg-bnb-orange' : 'bg-bnb-blue'}} btn-sm text-white btn-block"><b> <i class="far fa-flag fa-lg"></i> How to Generate and Apply Email Signature</b></a>

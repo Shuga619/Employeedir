@@ -33,11 +33,29 @@ class SignatureController extends Controller
 	    	}
 	    	else
 	    	{
-	    		$loc = 'Your Location Here';
+	    		$loc = 'Your Office Location Here';
 	    	}
 	    	$office = $emp->contact->location->name;
     	}
-    	return view('signature.result',compact('flag','emp','no','loc','office'));
+    	return view('signature.verify',compact('flag','emp','no','loc','office'));
     
+    }
+
+    public function generateCode(Request $request){
+        $flag = false;
+        $no = rand(10,30)%2;
+        $emp = Employee::find($request->employee_id);
+        $loc = $office = $telephone = $salutation = $po = $lam = null;
+        if(!blank($emp))
+        {
+            $flag = true;
+            $salutation = $request->salutation;
+            $office = $request->office;
+            $po = $request->po;
+            $loc = $request->dzongkhag;
+            $telephone = $request->telephone;
+            $lam = $request->lam;
+        }
+        return view('signature.result',compact('flag','emp','no','loc','office','telephone','salutation','po','lam'));
     }
 }
