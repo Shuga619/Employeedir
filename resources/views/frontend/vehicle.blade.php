@@ -77,24 +77,27 @@
               <h1 class="mb-0"> 
                 Bhutan National Bank Limited
               </h1>
-              <h2 class="no-case mb-5">Edit Information in Employee Directory</h2>
+              <h2 class="no-case mb-5">Search Employee with thier Vehicle Details</h2>
               <div class="mb-5">
                 <form class="d-block" action="{{ route('get_employee_and_send_otp_path') }}" method="POST">
                   @csrf
                   <div class="form-row mb-3">
-                    <div class="col-8">
-                      <input type="text" name="employeeid" class="form-control form-sz-lg" placeholder="Employee Identity Number">
+                    <div class="col-6">
+                      <input type="text" name="employeeid" class="form-control form-sz-lg" placeholder="Vehicle Number">
                     </div>
-                    <div class="col-4">
+                    <div class="col-6">
                       <select name="option_otp" class="form-control form-sz-lg">
-                        <option value="mobile" disabled="disabled">Registered Mobile Number</option>
-                        <option value="email" selected="selected">Registered Email ID</option>
+					  	<option value="two_wheeler" selected="selected">Two Wheeler Vehicle</option>
+                        <option value="light" selected="selected">Light Vehicle</option>
+						<option value="medium" selected="selected">Medium Vehicle</option>
+						<option value="heavy" selected="selected">Heavy Vehicle</option>
+                        <option value="vehicle_type" selected="selected">Vehicle Type</option>
                       </select>
                     </div>
                   </div>
                   <div class="form-row">
                     <div class="col-md-12">
-                      <button type="submit" class="btn bg-bnb-blue btn-block btn-lg text-white btn-primary">Send OTP</button>
+                      <button type="submit" class="btn bg-bnb-blue btn-block btn-lg text-white">Search Directory</button>
                     </div>
                   </div>
                 </form>

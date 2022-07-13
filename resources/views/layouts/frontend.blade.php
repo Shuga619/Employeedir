@@ -17,6 +17,7 @@
     <link href="{{ asset('css/directory.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <link rel="shortcut icon" href="{{ url('images/directory.png') }}">
+ 
 </head>
 <body id="page-top">
     @if(session('status')=="1")

@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Muli', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  padding-top: 54px;
+  padding-top: 154px;
   color: #868e96;
 }
 
@@ -30,12 +30,14 @@ h6 {
 }
 
 h1 {
-  font-size: 5.7rem;
+  font-size: 4.7rem;
   line-height: 5.5rem;
+  
+  
 }
 
 h2 {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
 }
 
 h3 {
@@ -116,13 +118,14 @@ p.lead {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin: auto auto 0;
-    padding: 0.5rem;
+    margin: auto auto 5;
+    padding: 0.5 rem;
   }
   #sideNav .navbar-brand .img-profile {
-    max-width: 10rem;
-    max-height: 10rem;
+    max-width: 8rem;
+    max-height: 8rem;
     border: 0.5rem solid rgba(255, 255, 255, 0.2);
+
   }
   #sideNav .navbar-collapse {
     display: -webkit-box;
@@ -146,7 +149,53 @@ p.lead {
   }
   #sideNav .navbar-collapse .navbar-nav .nav-item {
     display: block;
+
   }
+
+
+  li.nav-list{
+    text-align: justify;
+    margin-left: 0rem;
+    margin-bottom: 1rem;
+    
+  }
+ 
+  
+
+  li.nav-list:hover {
+
+    background-size: 0 3px, 100% 3px;
+ 
+}
+a:hover{
+  text-decoration: none;
+}
+li.nav-list {
+  
+    line-height:30px;
+    font-size:20px;
+    padding-left:10px;
+    padding-right:10px;
+    width: 100%;
+    background:
+    linear-gradient(
+      to right,
+      rgb(115, 178, 244),
+      rgb(151, 201, 241)
+    ),
+    linear-gradient(
+      to right,
+      #d48a6e,
+      rgb(89, 146, 203),
+      rgb(239, 192, 82)
+  );
+  background-size: 100% 1px, 0 2px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 300ms;
+  
+}
+
   #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link {
     display: block;
   }
@@ -193,3 +242,6 @@ a {
 a:hover, a:focus, a:active {
   color: #824027;
 }
+
+
+
