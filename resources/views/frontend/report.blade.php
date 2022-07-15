@@ -1,7 +1,7 @@
 @extends('layouts.frontend')
 
 @section('content')
-	<nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-bnb-blue" id="sideNav">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-bnb-blue" id="sideNav">
       	<a class="navbar-brand js-scroll-trigger" href="#page-top">
         	<span class="d-block d-lg-none">Search Employee</span>
         	<span class="d-none d-lg-block">
@@ -19,7 +19,7 @@
             		</h3>
           		</li>
 				 <li class="nav-item nav-list">
-					<a href="">
+					<a href="{{ route('get_search_path') }}">
 						<small class="text-white">
 						<i class='fas fa-home'></i>
 							Dashboard
@@ -90,77 +90,9 @@
     
   </nav>
     <div class="container-fluid p-0">
-      	<section class="search-section p-3 p-lg-5 d-block d-flex d-column bg-bnb-white">
+      	<section class="search-section p-1 p-lg-5 d-block  d-column bg-bnb-white">
         	<div class="my-auto">
-          		<h1 class="mb-0 d-none d-xl-block "> 
-            		Bhutan National Bank Limited
-          		</h1>
-              <h1 class="mb-0 d-none d-lg-block d-xl-none d-sm-block d-xs-none "> 
-                Bhutan National Bank
-              </h1>
-          		<h2 class="no-case mb-5 ">Search Employee Directory</h2>
-
-<body onload="load()">
-     
-      <p>
-      <div class="box mb-5 container">
-         <div class="box">
-            <div class="counter col-sm">
-               <p id='0101' class="fs-2">0</p>
-               <p>Employee</p>
-            </div>
-            <div class="counter col-sm">
-               <p id='0102' class="fs-2">876</p>
-               <p >Department</p>
-         </div>
-         <div class="counter col-sm">
-            <p class="fs-2"><span id='0103'>12</span></p>
-            <p class="align-content-center">Extension</p>
-         </div>
-      </div>
-   </div>
-   </p>
-   <script>
-      function animate(obj, initVal, lastVal, duration) {
-         let startTime = null;
-
-      //get the current timestamp and assign it to the currentTime variable
-      let currentTime = Date.now();
-
-      //pass the current timestamp to the step function
-      const step = (currentTime ) => {
-
-      //if the start time is null, assign the current time to startTime
-      if (!startTime) {
-         startTime = currentTime ;
-      }
-
-      //calculate the value to be used in calculating the number to be displayed
-      const progress = Math.min((currentTime - startTime)/ duration, 1);
-
-      //calculate what to be displayed using the value gotten above
-      obj.innerHTML = Math.floor(progress * (lastVal - initVal) + initVal);
-
-      //checking to make sure the counter does not exceed the last value (lastVal)
-      if (progress < 1) {
-         window.requestAnimationFrame(step);
-      } else {
-            window.cancelAnimationFrame(window.requestAnimationFrame(step));
-         }
-      };
-      //start animating
-         window.requestAnimationFrame(step);
-      }
-      let text1 = document.getElementById('0101');
-      let text2 = document.getElementById('0102');
-      let text3 = document.getElementById('0103');
-      const load = () => {
-         animate(text1, 0, 511, 7000);
-         animate(text2, 0, 232, 7000);
-         animate(text3, 100, 25, 7000);
-      }
-   </script>
-</body>
+          		<h2 class="no-case mb-5 ">Generate Employee Report</h2>
           		<div class="mb-5">
           			<form class="d-block" action="{{ route('search_directory_path') }}" method="POST">
                   @csrf
@@ -168,9 +100,16 @@
           					<div class="col-md-3">
           						<input type="text" name="employeename" class="form-control form-sz-lg" placeholder="Employee Name">
           					</div>
-                    <div class="col-md-3">
-                      <input type="text" name="flexcube" class="form-control form-sz-lg" placeholder="Flexcube ID">
-                    </div>
+
+							  <div class="col-md-3">
+          						<select name="department" class="form-control form-sz-lg">
+          							<option selected="selected" value="0">Select Branch</option>
+                        @foreach($departments as $d)
+                          <option value="{{ $d->id }}"> {{ $d->name }} </option>
+                        @endforeach
+          						</select>
+          					</div>
+                    
           					<div class="col-md-3">
           						<select name="department" class="form-control form-sz-lg">
           							<option selected="selected" value="0">Select Department</option>
@@ -181,31 +120,70 @@
           					</div>
           					<div class="col-md-3">
           						<select name="location" class="form-control form-sz-lg">
-          							<option selected="selected" value="0">Select Location</option>
+          							<option selected="selected" value="0">Select Designation</option>
           						  @foreach($locations as $l)
                           <option value="{{ $l->id }}">{{ $l->name }}</option>
                         @endforeach
                       </select>
           					</div>
           				</div>
-          				<div class="form-row">
-          					<div class="col-md-12">
-          						<button type="submit" class="btn btn-block btn-lg text-white bg-bnb-blue"><i class="fas fa-search"></i> Search Directory</button>
-          					</div>
-          				</div>
+          				
           			</form>
           		</div>
-          		<div>
-          			<p class="search-notification">
-          				<i class="far fa-bell fa-fw fa-2x"></i>Notification : 
-          				<br>
-          				Keeping all the above fields blank will view all the employees.
-          				<br>
-          				Keeping one or two above fields blank will ignore the blank fields.
-          			  <br>
-                  <br>
-                </p>
-          		</div>
+
+				<div class="mb-5">
+					<button type="button" class="btn btn-primary bg-bnb-blue">Export in Excel</button>
+
+				</div>
+				<div class="mb-5">
+					<table class="table table-bordered">
+  						<thead>
+   							 <tr>
+     							<th scope="col">#</th>
+    						  	<th scope="col">Name</th>
+      							<th scope="col">Employee ID</th>
+      							<th scope="col">Designation</th>
+								<th scope="col">Department</th>
+								<th scope="col">Phone Number</th>
+								<th scope="col">Email ID</th>
+								<th scope="col">Branch</th>
+    						</tr>
+  						</thead>
+ 						<tbody>
+   		 					<tr>
+      							<th scope="row">1</th>
+      							<td>Chening Yangden</td>
+      							<td>2022060104</td>
+      							<td>Assistant Manager</td>
+								<td>Digital Transformation</td>
+								<td>17307971</td>
+								<td>cyangden@bnb.bt</td>
+								<td>Thimphu Coporate Branch</td>
+    						</tr>
+							<tr>
+      							<th scope="row">1</th>
+      							<td>Chening Yangden</td>
+      							<td>2022060104</td>
+      							<td>Assistant Manager</td>
+								<td>Digital Transformation</td>
+								<td>17307971</td>
+								<td>cyangden@bnb.bt</td>
+								<td>Thimphu Coporate Branch</td>
+    						</tr>
+  						</tbody>
+					</table>
+				</div>						
+				<div>
+				<nav aria-label="Page navigation example">
+ 					<ul class="pagination justify-content-end">
+    					<li class="page-item"><a class="page-link" href="#">Previous</a></li>
+    					<li class="page-item"><a class="page-link" href="#">1</a></li>
+    					<li class="page-item"><a class="page-link" href="#">2</a></li>
+    					<li class="page-item"><a class="page-link" href="#">3</a></li>
+    					<li class="page-item"><a class="page-link" href="#">Next</a></li>
+  					</ul>
+				</nav>
+				</div>
         	</div>
       	</section>
     </div>

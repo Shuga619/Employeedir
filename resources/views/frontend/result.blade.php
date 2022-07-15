@@ -1,7 +1,7 @@
 @extends('layouts.frontend')
 
 @section('content')
-	<nav class="navbar navbar-expand-lg navbar-dark {{$no == 1 ? 'bg-bnb-orange' : 'bg-bnb-blue'}} fixed-top" id="sideNav">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-bnb-blue" id="sideNav">
       	<a class="navbar-brand js-scroll-trigger" href="#page-top">
         	<span class="d-block d-lg-none">Search Employee</span>
         	<span class="d-none d-lg-block">
@@ -14,18 +14,62 @@
       	<div class="collapse navbar-collapse" id="navbarSupportedContent">
         	<ul class="navbar-nav">
           		<li class="nav-item mb-5">
-            		<h3 class="no-case {{$no == 1 ? 'text-bnb-blue' : 'text-bnb-orange'}}">
+            		<h3 class="no-case">
             			Employee Directory 
             		</h3>
           		</li>
-              <li class="nav-item mb-5">
-                <a href="{{ route('get_search_path') }}" class="btn btn-block {{$no == 1 ? 'bg-bnb-blue' : 'bg-bnb-orange'}} {{$no == 1 ? 'text-bnb-orange' : 'text-bnb-blue'}}"><i class="fas fa-chevron-left fa-fw"></i> Back to Directory Search</a>
-              </li>
-          		<li class="nav-item">
-          			<small class="text-white"><b>Built By : <br> BNBL IT Department <br>2019</b></small>
+				 <li class="nav-item nav-list">
+					<a href="{{ route('get_search_path') }}">
+						<small class="text-white">
+						<i class='fas fa-home'></i>
+							Dashboard
+						</small>
+				
+					</a>
           		</li>
-        	</ul>
+				  <li class="nav-item nav-list">
+					<a href="{{ route('get_vehicle_path') }}">
+						<small class="text-white">
+						<i class='fas fa-car-alt'></i>
+							Vehicle Details
+						</small>
+					</a>
+          		</li>
+				  <li class="nav-item nav-list">
+					<a href="{{ route('login_info_path') }}">
+						<small class="text-white">
+						<i class="fas fa-user-edit"></i>
+							Edit Your Information
+						</small>
+					</a>
+          		</li>
+				  <li class="nav-item nav-list">
+					<a href="{{ route('employee_registration_path') }}">
+						<small class="text-white">
+						<i class="fas fa-user-plus"></i>
+							Register Your Information
+						</small>
+					</a>
+          		</li>
+				  <li class="nav-item nav-list">
+					<a href="{{ route('get_report_path') }}">
+					<small class="text-white">
+					<i class='fas fa-address-book'></i>
+						Generate Report
+						</small>
+					</a>
+          		</li>
+				  <li class="nav-item nav-list">
+					<a href="{{ route('sign_index_path') }}">
+						<small class="text-white">
+						<i class="fas fa-signature"></i>
+						Generate Mail Signature
+						</small>
+					</a>
+          		</li>
+        	</ul>	
       	</div>
+		
     </nav>
 
     <div class="container-fluid p-0">

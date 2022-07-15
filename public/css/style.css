@@ -1,9 +1,14 @@
+.bg-bnb-white{
+	background-color: #f4f6f9 !important;
+
+}
 .bg-bnb-orange{
 	background-color: #FEB139 !important;
 }
 .bg-bnb-blue{
 	background-color: #3066A6 !important;
 }
+
 .text-bnb-blue{
 	color: #3066A6;
 }
@@ -15,14 +20,17 @@
 }
 .no-case{
 	text-transform: none;
+  color: #FEB139;
 }
+
+
 .form-sz-lg{
 	height: 60px;
 	width: 100%;
 }
 .search-section {
-  padding-top: 5rem !important;
-  padding-bottom: 5rem !important;
+  padding-top: 0rem !important;
+  padding-bottom: 0rem !important;
   min-height: 100vh;
 }
 
@@ -234,3 +242,36 @@
 .text-black{
   color: #000;
 }
+
+.box {
+  display: flex;
+  flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+
+
+}
+
+.counter{
+  flex: 1 1 auto;
+  height: 5rem;
+  background-color: #f4f6f9; 
+  margin: 10px; 
+  text-align: center; 
+  font-size: 18px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  border-radius: 1rem;
+  font-weight: 700;
+  color: #343a40;
+ 
+}
+
+ .counter:hover{
+  box-shadow: 3px 3px 10px #3066A6;
+  transition-duration: 1s;
+ }
+p{
+text-align: center;
+}
+
+
