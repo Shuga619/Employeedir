@@ -1,7 +1,7 @@
 @extends('layouts.frontend')
 
 @section('content')
-	<nav class="navbar navbar-expand-lg navbar-dark {{$no == 1 ? 'bg-bnb-orange' : 'bg-bnb-blue'}} fixed-top" id="sideNav">
+	<nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-bnb-blue" id="sideNav">
       	<a class="navbar-brand js-scroll-trigger" href="#page-top">
         	<span class="d-block d-lg-none">Search Employee</span>
         	<span class="d-none d-lg-block">
@@ -14,27 +14,134 @@
       	<div class="collapse navbar-collapse" id="navbarSupportedContent">
         	<ul class="navbar-nav">
           		<li class="nav-item mb-5">
-            		<h3 class="no-case {{$no == 1 ? 'text-bnb-blue' : 'text-bnb-orange'}}">
+            		<h3 class="no-case">
             			Employee Directory 
             		</h3>
           		</li>
-          		<li class="nav-item">
-          			<small class="text-white"><b>Built By : <br> BNBL IT Department <br>{{ date_format(date_create(),'Y') }}</b></small>
+				 <li class="nav-item nav-list">
+					<a href="">
+						<small class="text-white">
+						<i class='fas fa-home'></i>
+							Dashboard
+						</small>
+				
+					</a>
           		</li>
-        	</ul>
+				  <li class="nav-item nav-list">
+					<a href="{{ route('get_vehicle_path') }}">
+						<small class="text-white">
+						<i class='fas fa-car-alt'></i>
+							Vehicle Details
+						</small>
+					</a>
+          		</li>
+				  <li class="nav-item nav-list">
+					<a href="{{ route('login_info_path') }}">
+						<small class="text-white">
+						<i class="fas fa-user-edit"></i>
+							Edit Your Information
+						</small>
+					</a>
+          		</li>
+				  <li class="nav-item nav-list">
+					<a href="{{ route('employee_registration_path') }}">
+						<small class="text-white">
+						<i class="fas fa-user-plus"></i>
+							Register Your Information
+						</small>
+					</a>
+          		</li>
+				  <li class="nav-item nav-list">
+					<a href="{{ route('get_report_path') }}">
+					<small class="text-white">
+					<i class='fas fa-address-book'></i>
+						Generate Report
+						</small>
+					</a>
+          		</li>
+				  <li class="nav-item nav-list">
+					<a href="{{ route('sign_index_path') }}">
+						<small class="text-white">
+						<i class="fas fa-signature"></i>
+						Generate Mail Signature
+						</small>
+					</a>
+          		</li>
+        	</ul>	
       	</div>
+		
     </nav>
-
     <div class="container-fluid p-0">
-      	<section class="search-section p-3 p-lg-5 d-block d-flex d-column {{$no == 1 ? 'bg-bnb-blue' : 'bg-bnb-orange'}}">
+      	<section class="search-section p-3 p-lg-5 d-block d-flex d-column bg-bnb-white">
         	<div class="my-auto">
-          		<h1 class="mb-0 d-none d-xl-block {{$no == 1 ? 'text-white' : ''}}"> 
+          		<h1 class="mb-0 d-none d-xl-block "> 
             		Bhutan National Bank Limited
           		</h1>
-              <h1 class="mb-0 d-none d-lg-block d-xl-none d-sm-block d-xs-none {{$no == 1 ? 'text-white' : ''}}"> 
+              <h1 class="mb-0 d-none d-lg-block d-xl-none d-sm-block d-xs-none "> 
                 Bhutan National Bank
               </h1>
-          		<h2 class="no-case mb-5 {{$no == 1 ? 'text-white' : ''}}">Search Employee Directory</h2>
+          		<h2 class="no-case mb-5 ">Search Employee Directory</h2>
+
+<body onload="load()">
+     
+      <p>
+      <div class="box mb-5 container">
+         <div class="box">
+            <div class="counter col-sm">
+               <!-- <p id='0101' class="fs-2">0</p> -->
+			   <h4 class="fs-2">{{$employees}}</h4>
+               <p>Employee</p>
+            </div>
+            <div class="counter col-sm">
+			<h4 class="fs-2" id='0102'>0</h4>
+               <p >Department</p>
+         </div>
+         <div class="counter col-sm">
+			<h4 class="fs-2" id='0103'>0</h4>	
+            <p class="align-content-center">Extension</p>
+         </div>
+      </div>
+   </div>
+   </p>
+   <script>
+      function animate(obj, initVal, lastVal, duration) {
+         let startTime = null;
+
+      //get the current timestamp and assign it to the currentTime variable
+      let currentTime = Date.now();
+
+      //pass the current timestamp to the step function
+      const step = (currentTime ) => {
+
+      //if the start time is null, assign the current time to startTime
+      if (!startTime) {
+         startTime = currentTime ;
+      }
+
+      //calculate the value to be used in calculating the number to be displayed
+      const progress = Math.min((currentTime - startTime)/ duration, 1);
+
+      //calculate what to be displayed using the value gotten above
+      obj.innerHTML = Math.floor(progress * (lastVal - initVal) + initVal);
+
+      //checking to make sure the counter does not exceed the last value (lastVal)
+      if (progress < 1) {
+         window.requestAnimationFrame(step);
+      } else {
+            window.cancelAnimationFrame(window.requestAnimationFrame(step));
+         }
+      };
+      //start animating
+         window.requestAnimationFrame(step);
+      }
+      let text2 = document.getElementById('0102');
+      let text3 = document.getElementById('0103');
+      const load = () => {
+         animate(text2, 0, 12, 1000);
+         animate(text3, 0, 39, 2000);
+      }
+   </script>
+</body>
           		<div class="mb-5">
           			<form class="d-block" action="{{ route('search_directory_path') }}" method="POST">
                   @csrf
@@ -64,13 +171,13 @@
           				</div>
           				<div class="form-row">
           					<div class="col-md-12">
-          						<button type="submit" class="btn {{$no == 1 ? 'bg-bnb-orange' : 'bg-bnb-blue'}} btn-block btn-lg text-white"><i class="fas fa-search"></i> Search Directory</button>
+          						<button type="submit" class="btn btn-block btn-lg text-white bg-bnb-blue"><i class="fas fa-search"></i> Search Directory</button>
           					</div>
           				</div>
           			</form>
           		</div>
           		<div>
-          			<p class="search-notification {{$no == 1 ? 'text-white' : ''}}">
+          			<p class="search-notification">
           				<i class="far fa-bell fa-fw fa-2x"></i>Notification : 
           				<br>
           				Keeping all the above fields blank will view all the employees.
@@ -78,17 +185,6 @@
           				Keeping one or two above fields blank will ignore the blank fields.
           			  <br>
                   <br>
-                  <div class="row">
-                    <div class="col-md-4">
-                      <a href="{{ route('login_info_path') }}" class="btn {{$no == 1 ? 'bg-bnb-orange' : 'bg-bnb-blue'}} btn-sm text-white btn-block"><b><i class="fas fa-user-edit"></i> Edit your Information</b></a>
-                    </div>
-                    <div class="col-md-4">
-                      <a href="{{ route('employee_registration_path') }}" class="btn {{$no == 1 ? 'bg-bnb-orange' : 'bg-bnb-blue'}} btn-sm text-white btn-block"><b> <i class="fas fa-user-plus"></i> Register your Information</b></a>
-                    </div>
-                    <div class="col-md-4">
-                      <a href="{{ route('sign_index_path') }}" class="btn {{$no == 1 ? 'bg-bnb-orange' : 'bg-bnb-blue'}} btn-sm text-white btn-block"><b> <i class="fas fa-signature"></i> Generate Mail Signature</b></a>
-                    </div>
-                  </div>
                 </p>
           		</div>
         	</div>

@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Employee extends Model
 {
     protected $fillable = [
-      'name','designation','title','employee_id','department_id',  
+      'name','designation','title','employee_id','department_id','vehicle_number','present_address',
     ];
 
     public function department()
@@ -19,7 +19,7 @@ class Employee extends Model
     {
     	return $this->hasOne('App\Contact');
     }
-
+    
     public function signin()
     {
         return $this->hasOne('App\Signin', 'employee_id','id');

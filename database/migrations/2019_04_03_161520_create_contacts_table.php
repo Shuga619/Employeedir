@@ -21,6 +21,8 @@ class CreateContactsTable extends Migration
             $table->string('flexcube')->nullable();
             $table->unsignedInteger('location_id');
             $table->unsignedInteger('employee_id');
+            $table->string('vehicle_number')->nullable();
+            $table->string('present_address')->nullable();
             $table->timestamps();
             $table->foreign('location_id')->references('id')
                                             ->on('locations')

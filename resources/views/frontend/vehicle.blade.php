@@ -77,24 +77,18 @@
               <h1 class="mb-0"> 
                 Bhutan National Bank Limited
               </h1>
-              <h2 class="no-case mb-5">Edit Information in Employee Directory</h2>
+              <h2 class="no-case mb-5">Search Employee with thier Vehicle Details</h2>
               <div class="mb-5">
-                <form class="d-block" action="{{ route('get_employee_and_send_otp_path') }}" method="POST">
+                <form class="d-block" action="{{ route('search_vehicle_path') }}" method="POST">
                   @csrf
                   <div class="form-row mb-3">
-                    <div class="col-8">
-                      <input type="text" name="employeeid" class="form-control form-sz-lg" placeholder="Employee Identity Number">
-                    </div>
-                    <div class="col-4">
-                      <select name="option_otp" class="form-control form-sz-lg">
-                        <option value="mobile" disabled="disabled">Registered Mobile Number</option>
-                        <option value="email" selected="selected">Registered Email ID</option>
-                      </select>
+                    <div class="col-12">
+                      <input type="text" name="vehicleid" class="form-control form-sz-lg" placeholder="Enter Vehicle Number (Ex. BP-0-A0000)">
                     </div>
                   </div>
                   <div class="form-row">
                     <div class="col-md-12">
-                      <button type="submit" class="btn bg-bnb-blue btn-block btn-lg text-white btn-primary">Send OTP</button>
+                      <button type="submit" class="btn bg-bnb-blue btn-block btn-lg text-white">Search Directory</button>
                     </div>
                   </div>
                 </form>
@@ -103,3 +97,4 @@
         </section>
     </div>
 @endsection
+<div class="mb-5">

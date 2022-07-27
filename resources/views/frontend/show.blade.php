@@ -3,7 +3,7 @@
 @section('content')
 	<nav class="navbar navbar-expand-lg navbar-dark {{$no == 1 ? 'bg-bnb-orange' : 'bg-bnb-blue'}} fixed-top" id="sideNav">
       	<a class="navbar-brand js-scroll-trigger" href="#page-top">
-        	<span class="d-block d-lg-none">BNBL Employee Directory</span>
+        	<span class="d-block d-lg-none"> Directory</span>
         	<span class="d-none d-lg-block">
           		<img class="img-fluid img-profile rounded-circle mx-auto mb-2" src='{{asset ("storage/employee_images/$record->image")}}' alt="">
         	</span>

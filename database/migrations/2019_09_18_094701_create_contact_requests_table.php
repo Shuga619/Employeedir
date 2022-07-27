@@ -25,14 +25,12 @@ class CreateContactRequestsTable extends Migration
             $table->string('mobile')->nullable();
             $table->string('extension')->nullable();
             $table->string('flexcube')->nullable();
+            $table->string('vehicle_number')->nullable();
+            $table->string('present_address')->nullable();
             $table->unsignedInteger('location_id');
             $table->timestamps();
             $table->foreign('location_id')->references('id')
                                             ->on('locations')
-                                            ->onUpdate('cascade')
-                                            ->onDelete('cascade');
-            $table->foreign('department_id')->references('id')
-                                            ->on('departments')
                                             ->onUpdate('cascade')
                                             ->onDelete('cascade');
         });
