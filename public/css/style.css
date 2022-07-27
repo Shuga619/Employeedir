@@ -29,8 +29,8 @@
 	width: 100%;
 }
 .search-section {
-  padding-top: 0rem !important;
-  padding-bottom: 0rem !important;
+  padding-top: 5rem !important;
+  padding-bottom: 5rem !important;
   min-height: 100vh;
 }
 
@@ -273,5 +273,38 @@
 p{
 text-align: center;
 }
+
+.card-img-top{
+  height: 105px; 
+  width: 100px; 
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 12px;
+}
+.card-body{
+  padding: 6%;
+  
+}
+.text-center  small {
+  font-size: 75%;
+  font-weight: 700;
+ 
+}
+b{
+  font-size: 75%;
+ 
+}
+.scroll {
+
+  overflow-x:hidden; 
+  
+}
+
+
+
+
+
+
+
 
 

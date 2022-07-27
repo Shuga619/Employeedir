@@ -19,33 +19,58 @@
             		</h3>
           		</li>
 				 <li class="nav-item nav-list">
-					<a href="{{ route('get_search_path') }}"><small class="text-white">Dashboard</small>
+					<a href="{{ route('get_search_path') }}">
+						<small class="text-white">
+						<i class='fas fa-home'></i>
+							Dashboard
+						</small>
+				
 					</a>
           		</li>
 				  <li class="nav-item nav-list">
-					<a href="{{ route('get_vehicle_path') }}"><small class="text-white">Vechicle Details</small>
+					<a href="{{ route('get_vehicle_path') }}">
+						<small class="text-white">
+						<i class='fas fa-car-alt'></i>
+							Vehicle Details
+						</small>
 					</a>
           		</li>
 				  <li class="nav-item nav-list">
-					<a href="{{ route('login_info_path') }}"><small class="text-white"></i>Edit Your Information</small>
+					<a href="{{ route('login_info_path') }}">
+						<small class="text-white">
+						<i class="fas fa-user-edit"></i>
+							Edit Your Information
+						</small>
 					</a>
           		</li>
 				  <li class="nav-item nav-list">
-					<a href="{{ route('employee_registration_path') }}"><small class="text-white">Register Your Information</small>
+					<a href="{{ route('employee_registration_path') }}">
+						<small class="text-white">
+						<i class="fas fa-user-plus"></i>
+							Register Your Information
+						</small>
 					</a>
           		</li>
 				  <li class="nav-item nav-list">
-					<a href="{{ route('get_report_path') }}"><small class="text-white">Generate Report</small>
+					<a href="{{ route('get_report_path') }}">
+					<small class="text-white">
+					<i class='fas fa-address-book'></i>
+						Generate Report
+						</small>
 					</a>
           		</li>
 				  <li class="nav-item nav-list">
-					<a href=""><small class="text-white"><i class="fas fa-signature"></i>Generate Mail Signature</small>
+					<a href="{{ route('sign_index_path') }}">
+						<small class="text-white">
+						<i class="fas fa-signature"></i>
+						Generate Mail Signature
+						</small>
 					</a>
           		</li>
         	</ul>	
       	</div>
-		
     </nav>
+	
     <div class="container-fluid p-0">
       	<section class="search-section p-3 p-lg-5 d-block d-flex d-column bg-bnb-white">
         	<div class="my-auto">
@@ -91,6 +116,7 @@
                   </div>
                 </p>
           		</div>
+				
         	</div>
       	</section>
     </div>

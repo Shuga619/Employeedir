@@ -72,25 +72,9 @@
 		
     </nav>
 
-	<nav class="main-header navbar navbar-expand navbar-white navbar-light ">
-    <!-- Left navbar links -->
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Home</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
-      </li>
-    </ul>
-
-    <!-- Right navbar links -->
-    
-  </nav>
+	
     <div class="container-fluid p-0">
-      	<section class="search-section p-1 p-lg-5 d-block  d-column bg-bnb-white">
+      	<section class="search-section p-3 p-lg-5 d-block  d-column d-flex bg-bnb-white">
         	<div class="my-auto">
           		<h2 class="no-case mb-5 ">Generate Employee Report</h2>
           		<div class="mb-5">

@@ -31,8 +31,8 @@ Route::post('/BNBLEmployeeDirectory', 'DirectoryController@searchDirectory')->na
 
 
 Route::get('/', 'VehicleController@getDirectorySearch');
-Route::get('/BNBLEmployeeVehicle/vehicle', 'VehicleController@getDirectorySearch')->name('get_vehicle_path');
-Route::get('/BNBLEmployeeVehicley/vehicleresult', 'VehicleController@getResult')->name('vehicle_path');
+Route::get('/BNBLEmployeeVehicle', 'VehicleController@getDirectorySearch')->name('get_vehicle_path');
+Route::get('/BNBLEmployeeVehicle/vehicleresult', 'VehicleController@getResult')->name('vehicle_path');
 Route::get('/BNBLEmployeeVehicle/vehicleresult/{id}/show/{ename}/{location}/{department}', 'VehicleController@getShow')->name('show_vehicle_path');
 Route::post('/BNBLEmployeeVehicle', 'VehicleController@searchDirectory')->name('search_vehicle_path');
 

@@ -69,40 +69,70 @@
           		</li>
         	</ul>	
       	</div>
-		
     </nav>
-    <div class="container-fluid p-0">
-        <section class="search-section p-3 p-lg-5 d-block d-flex d-column}">
-          <div class="my-auto">
-              <h1 class="mb-0"> 
-                Bhutan National Bank Limited
+
+	<div class="container-fluid p-0">
+      	<section class="search-section p-3 p-lg-5 d-block d-column bg-bnb-white">
+        	<div class="my-auto">
+			<h1 class="mb-0 d-none d-xl-block "> 
+            		Bhutan National Bank Limited
+          		</h1>
+              <h1 class="mb-0 d-none d-lg-block d-xl-none d-sm-block d-xs-none "> 
+                Bhutan National Bank
               </h1>
-              <h2 class="no-case mb-5">Search Employee with thier Vehicle Details</h2>
-              <div class="mb-5">
-                <form class="d-block" action="{{ route('get_employee_and_send_otp_path') }}" method="POST">
+          		<h2 class="no-case mb-5">Search Employee with thier Vehicle Details</h2>
+				
+				  <div class="mb-5">
+          			<form class="d-block" action="{{ route('search_vehicle_path') }}" method="POST">
                   @csrf
-                  <div class="form-row mb-3">
-                    <div class="col-6">
-                      <input type="text" name="employeeid" class="form-control form-sz-lg" placeholder="Vehicle Number">
+          				<div class="form-row mb-3">
+          					<div class="col-md-3">
+          						<input type="text" name="employeename" class="form-control form-sz-lg" placeholder="Employee Name">
+          					</div>
+                    <div class="col-md-3">
+                      <input type="text" name="flexcube" class="form-control form-sz-lg" placeholder="Flexcube ID">
                     </div>
-                    <div class="col-6">
-                      <select name="option_otp" class="form-control form-sz-lg">
-					  	<option value="two_wheeler" selected="selected">Two Wheeler Vehicle</option>
-                        <option value="light" selected="selected">Light Vehicle</option>
-						<option value="medium" selected="selected">Medium Vehicle</option>
-						<option value="heavy" selected="selected">Heavy Vehicle</option>
-                        <option value="vehicle_type" selected="selected">Vehicle Type</option>
+          					<div class="col-md-3">
+          						<select name="department" class="form-control form-sz-lg">
+          							<option selected="selected" value="0">Select Department</option>
+                        @foreach($departments as $d)
+                          <option value="{{ $d->id }}"> {{ $d->name }} </option>
+                        @endforeach
+          						</select>
+          					</div>
+          					<div class="col-md-3">
+          						<select name="location" class="form-control form-sz-lg">
+          							<option selected="selected" value="0">Select Location</option>
+          						  @foreach($locations as $l)
+                          <option value="{{ $l->id }}">{{ $l->name }}</option>
+                        @endforeach
                       </select>
-                    </div>
-                  </div>
-                  <div class="form-row">
-                    <div class="col-md-12">
-                      <button type="submit" class="btn bg-bnb-blue btn-block btn-lg text-white">Search Directory</button>
-                    </div>
-                  </div>
-                </form>
-              </div>
-          </div>
-        </section>
+          					</div>
+          				</div>
+          				<div class="form-row">
+          					<div class="col-md-12">
+          						<button type="submit" class="btn btn-block btn-lg text-white bg-bnb-blue"><i class="fas fa-search"></i> Search Directory</button>
+          					</div>
+          				</div>
+          			</form>
+          		</div>
+
+
+				  <div>
+          			<p class="search-notification ">
+          				<i class="far fa-bell fa-fw fa-2x"></i>Notification : 
+          				<br>
+          				Keeping all the above fields blank will view all the employees.
+          				<br>
+          				
+          			  <br>
+                  <br>
+                  </p>
+          		</div>
+										
+				
+        	</div>
+				
+      	</section>
     </div>
 @endsection
