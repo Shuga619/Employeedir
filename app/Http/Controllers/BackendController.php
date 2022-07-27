@@ -8,6 +8,7 @@ use App\Location;
 use App\User;
 use Auth;
 use App\Employee;
+use App\Vehicle;
 
 class BackendController extends Controller
 {

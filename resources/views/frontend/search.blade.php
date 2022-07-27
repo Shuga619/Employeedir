@@ -71,24 +71,6 @@
       	</div>
 		
     </nav>
-
-	<nav class="main-header navbar navbar-expand navbar-white navbar-light ">
-    <!-- Left navbar links -->
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Home</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
-      </li>
-    </ul>
-
-    <!-- Right navbar links -->
-    
-  </nav>
     <div class="container-fluid p-0">
       	<section class="search-section p-3 p-lg-5 d-block d-flex d-column bg-bnb-white">
         	<div class="my-auto">
@@ -106,15 +88,16 @@
       <div class="box mb-5 container">
          <div class="box">
             <div class="counter col-sm">
-               <p id='0101' class="fs-2">0</p>
+               <!-- <p id='0101' class="fs-2">0</p> -->
+			   <h4 class="fs-2">{{$employees}}</h4>
                <p>Employee</p>
             </div>
             <div class="counter col-sm">
-               <p id='0102' class="fs-2">876</p>
+			<h4 class="fs-2" id='0102'>0</h4>
                <p >Department</p>
          </div>
          <div class="counter col-sm">
-            <p class="fs-2"><span id='0103'>12</span></p>
+			<h4 class="fs-2" id='0103'>0</h4>	
             <p class="align-content-center">Extension</p>
          </div>
       </div>
@@ -151,13 +134,11 @@
       //start animating
          window.requestAnimationFrame(step);
       }
-      let text1 = document.getElementById('0101');
       let text2 = document.getElementById('0102');
       let text3 = document.getElementById('0103');
       const load = () => {
-         animate(text1, 0, 511, 7000);
-         animate(text2, 0, 232, 7000);
-         animate(text3, 100, 25, 7000);
+         animate(text2, 0, 12, 1000);
+         animate(text3, 0, 39, 2000);
       }
    </script>
 </body>

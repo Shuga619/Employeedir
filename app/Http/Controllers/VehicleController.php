@@ -7,6 +7,7 @@ use App\Employee;
 use App\Department;
 use App\Location;
 use App\Contact;
+use App\Vehicle;
 use Illuminate\Support\Facades\Crypt;
 
 class VehicleController extends Controller

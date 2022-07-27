@@ -21,11 +21,13 @@ class CreateEmployeesTable extends Migration
             $table->unsignedInteger('department_id');
             $table->string('employee_id');
             $table->string('image');
+            $table->string('vehicle_number')->nullable();
+            $table->string('present_address')->nullable();
             $table->timestamps();
             $table->foreign('department_id')->references('id')
                                             ->on('departments')
                                             ->onUpdate('cascade')
-                                            ->onDelete('cascade');
+                                            ->onDelete('cascade'); 
         });
     }
 

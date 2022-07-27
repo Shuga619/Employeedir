@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Employee;
 use App\Contact;
 use App\Department;
+use App\Vehicle;
 use App\Location;
 use App\Mail\SendOTP;
 use App\ContactRequest;
@@ -217,6 +218,8 @@ class InfoController extends Controller
         $newcontact->extension = $request->extension;
         $newcontact->flexcube = $request->flexcube;
         $newcontact->location_id = $request->location;
+        $newcontact->vehicle_number = $request->vehicle_number;
+        $newcontact->present_address = $request->present_address;
         
         if($newcontact->save())
         {

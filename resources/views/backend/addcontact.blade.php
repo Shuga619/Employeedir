@@ -67,6 +67,14 @@
                             </select>
                   				</div>
                 			</div>
+						<div class="form-group row">
+							<div class="col-sm-6 mb-3 mb-sm-0">
+								<input type="text" class="form-control form-control-user" placeholder="Vehicle Number" name="vehicle_number">
+							</div>
+							<div class="col-sm-6 mb-3 mb-sm-0">
+								<input type="text" class="form-control form-control-user" placeholder="Present Address" name="present_address" required="required">
+							</div>
+                      	</div>
                       <hr>
                       <div class="form-group row">
                         <p class="mb-4">Employee's Profile Picture</p>

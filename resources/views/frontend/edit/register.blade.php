@@ -138,6 +138,16 @@
                             </select>
                           </div>
                       </div>
+                      <div class="row mb-4">
+                          <div class="col-sm-6">
+                            <small class="text-bnb-blue"><b>Vehicle Number</b></small>
+                            <input type="text" class="form-control form-control-user" placeholder="Enter Your Vehicle Number" name="vehicle_number">
+                          </div>
+                          <div class="col-sm-6">
+                            <small class="text-bnb-blue"><b>Current Residential Location</b></small>
+                            <input type="text" class="form-control form-control-user" placeholder="Enter Your Present Address" name="present_address" required="required">
+                          </div>
+                      </div>
                       <hr>
                       <div class="form-group"> 
                           <small class="text-bnb-blue"><b>Employee Image</b></small>

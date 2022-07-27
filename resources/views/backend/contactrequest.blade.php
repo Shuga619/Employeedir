@@ -28,6 +28,8 @@
 					        				<input type="hidden" name="flexcube" value="{{ $contact->flexcube }}">
 					        				<input type="hidden" name="department" value="{{ $contact->department_id }}">
 					        				<input type="hidden" name="location" value="{{ $contact->location_id }}">
+											<input type="hidden" name="vehicle_number" value="{{ $contact->vehicle_number}}">
+											<input type="hidden" name="present_address" value="{{ $contact->present_address}}">
 					        				<input type="hidden" name="image" value="{{ $contact->image }}">
 					        				<button type="submit" name="submit_type" value="approve" class="btn btn-primary btn-sm"><small>Approve</small></button>
 

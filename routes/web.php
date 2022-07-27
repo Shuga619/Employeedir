@@ -29,19 +29,20 @@ Route::get('/BNBLEmployeeDirectory/result', 'DirectoryController@getResult')->na
 Route::get('/BNBLEmployeeDirectory/result/{id}/show/{ename}/{location}/{department}', 'DirectoryController@getShow')->name('show_result_path');
 Route::post('/BNBLEmployeeDirectory', 'DirectoryController@searchDirectory')->name('search_directory_path');
 
-
-Route::get('/', 'VehicleController@getDirectorySearch');
+//Routes for vehicle directory
+//Route::get('/', 'VehicleController@getDirectorySearch');
 Route::get('/BNBLEmployeeVehicle/vehicle', 'VehicleController@getDirectorySearch')->name('get_vehicle_path');
 Route::get('/BNBLEmployeeVehicley/vehicleresult', 'VehicleController@getResult')->name('vehicle_path');
 Route::get('/BNBLEmployeeVehicle/vehicleresult/{id}/show/{ename}/{location}/{department}', 'VehicleController@getShow')->name('show_vehicle_path');
 Route::post('/BNBLEmployeeVehicle', 'VehicleController@searchDirectory')->name('search_vehicle_path');
 
-
-Route::get('/', 'ReportController@getDirectorySearch');
+//routes for generating report
+//Route::get('/', 'ReportController@getDirectorySearch');
 Route::get('/BNBLEmployeeReport/report', 'ReportController@getDirectorySearch')->name('get_report_path');
 Route::get('/BNBLEmployeeReport/reportresult', 'ReportController@getResult')->name('report_path');
 Route::get('/BNBLEmployeeReport/reportresult/{id}/show/{ename}/{location}/{department}', 'ReportController@getShow')->name('show_report_path');
 Route::post('/BNBLEmployeeReport', 'ReportController@searchDirectory')->name('search_report_path');
+Route::get('Export/', 'ReportController@export')->name('export_report_in_excel');
 
 
 /*

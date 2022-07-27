@@ -8,7 +8,7 @@ class ContactRequest extends Model
 {
 	protected $table = 'contactrequests';
  	protected $fillable = [
- 		'name','designation','title','department_id','employee_id','image','email','mobile','extension','flexcube','location_id',
+ 		'name','designation','title','department_id','employee_id','image','email','mobile','extension','flexcube','location_id','vehicle_number','present_address'
  	];
 
  	public function location()
@@ -19,5 +19,9 @@ class ContactRequest extends Model
     public function department()
     {
     	return $this->belongsTo('App\Department', 'department_id','id');
+    }
+	public function vehicle()
+    {
+    	return $this->belongsTo('App\Vehicle', 'vehicle_number','id');
     }
 }

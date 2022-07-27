@@ -32,6 +32,8 @@ class ContactController extends Controller
     	$mobile = $request->mobile;
     	$location = $request->location;
         $employee_id = $request->empid;
+        $vehicle_number = $request->vehicle_number;
+        $present_address = $request ->present_address;
     	$image = request()->file('image')->getClientOriginalName();
     	// Storage::delete('public/employee_pdf/'.$request->olddoc);
         request()->file('image')->storeAs('public/employee_images',$image);
@@ -50,6 +52,8 @@ class ContactController extends Controller
     		$contact->mobile = $mobile;
     		$contact->extension = $extension;
     		$contact->flexcube = $flexcube;
+            $contact->vehicle_number = $vehicle_number;
+            $contact->present_address = $present_address;
     		$contact->location_id = $location;
     		$contact->employee_id = $employee->id;
     		if($contact->save())
@@ -134,6 +138,8 @@ class ContactController extends Controller
             $contact->mobile = $mobile;
             $contact->extension = $extension;
             $contact->flexcube = $flexcube;
+            $contact->vehicle_number = $vehicle_number;
+            $contact->present_address = $present_address;
             $contact->location_id = $location;
             $contact->save();
 
@@ -178,6 +184,8 @@ class ContactController extends Controller
 			    		$contact->extension = $row['extension'];
 			    		$contact->flexcube = $row['flexcube'];
 			    		$contact->location_id = $row['location'];
+                        $contact->vehicle_number = $row['vehicle_number'];
+                        $contact->present_address = $row['present_address'];
 			    		$contact->employee_id = $employee->id;
 			    		$contact->save();
                         
@@ -260,6 +268,9 @@ class ContactController extends Controller
             $location = $request->location;
             $employee_id = $request->employee_id;
             $image = $request->image;
+            $vehicle_number = $request->vehicle_number;
+            $present_address = $request ->present_address;
+            
             
             $employee = new Employee;
             $contact = new Contact;
@@ -278,6 +289,8 @@ class ContactController extends Controller
                 $contact->flexcube = $flexcube;
                 $contact->location_id = $location;
                 $contact->employee_id = $employee->id;
+                $contact->vehicle_number = $vehicle_number;
+                $contact->present_address = $present_address;
                 if($contact->save())
                 {
                     $signin->employee_id = $employee->id;

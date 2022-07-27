@@ -1,6 +1,15 @@
 @extends('layouts.frontend')
 
 @section('content')
+<head>
+<link href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendor/datatables/dataTables.bootstrap4.min.css')}}" rel="stylesheet">
+
+  <link href="{{ asset('css/sb-admin-2.min.css') }}" rel="stylesheet">
+    <link rel="shortcut icon" href="{{ url('images/directory.png') }}"> 
+</head>
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-bnb-blue" id="sideNav">
       	<a class="navbar-brand js-scroll-trigger" href="#page-top">
         	<span class="d-block d-lg-none">Search Employee</span>
@@ -71,24 +80,6 @@
       	</div>
 		
     </nav>
-
-	<nav class="main-header navbar navbar-expand navbar-white navbar-light ">
-    <!-- Left navbar links -->
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Home</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
-      </li>
-    </ul>
-
-    <!-- Right navbar links -->
-    
-  </nav>
     <div class="container-fluid p-0">
       	<section class="search-section p-1 p-lg-5 d-block  d-column bg-bnb-white">
         	<div class="my-auto">
@@ -102,89 +93,35 @@
           					</div>
 
 							  <div class="col-md-3">
-          						<select name="department" class="form-control form-sz-lg">
+          						<select name="location" class="form-control form-sz-lg" id="location">
           							<option selected="selected" value="0">Select Branch</option>
-                        @foreach($departments as $d)
-                          <option value="{{ $d->id }}"> {{ $d->name }} </option>
+          						  @foreach($locations as $l)
+                          <option value="{{ $l->id }}">{{ $l->name }}</option>
                         @endforeach
-          						</select>
+                      </select>
           					</div>
                     
           					<div class="col-md-3">
-          						<select name="department" class="form-control form-sz-lg">
+          						<select name="department" class="form-control form-sz-lg" id="department">
           							<option selected="selected" value="0">Select Department</option>
                         @foreach($departments as $d)
                           <option value="{{ $d->id }}"> {{ $d->name }} </option>
                         @endforeach
           						</select>
           					</div>
-          					<div class="col-md-3">
-          						<select name="location" class="form-control form-sz-lg">
-          							<option selected="selected" value="0">Select Designation</option>
-          						  @foreach($locations as $l)
-                          <option value="{{ $l->id }}">{{ $l->name }}</option>
-                        @endforeach
-                      </select>
-          					</div>
           				</div>
           				
           			</form>
           		</div>
-
-				<div class="mb-5">
-					<button type="button" class="btn btn-primary bg-bnb-blue">Export in Excel</button>
-
-				</div>
-				<div class="mb-5">
-					<table class="table table-bordered">
-  						<thead>
-   							 <tr>
-     							<th scope="col">#</th>
-    						  	<th scope="col">Name</th>
-      							<th scope="col">Employee ID</th>
-      							<th scope="col">Designation</th>
-								<th scope="col">Department</th>
-								<th scope="col">Phone Number</th>
-								<th scope="col">Email ID</th>
-								<th scope="col">Branch</th>
-    						</tr>
-  						</thead>
- 						<tbody>
-   		 					<tr>
-      							<th scope="row">1</th>
-      							<td>Chening Yangden</td>
-      							<td>2022060104</td>
-      							<td>Assistant Manager</td>
-								<td>Digital Transformation</td>
-								<td>17307971</td>
-								<td>cyangden@bnb.bt</td>
-								<td>Thimphu Coporate Branch</td>
-    						</tr>
-							<tr>
-      							<th scope="row">1</th>
-      							<td>Chening Yangden</td>
-      							<td>2022060104</td>
-      							<td>Assistant Manager</td>
-								<td>Digital Transformation</td>
-								<td>17307971</td>
-								<td>cyangden@bnb.bt</td>
-								<td>Thimphu Coporate Branch</td>
-    						</tr>
-  						</tbody>
-					</table>
-				</div>						
-				<div>
-				<nav aria-label="Page navigation example">
- 					<ul class="pagination justify-content-end">
-    					<li class="page-item"><a class="page-link" href="#">Previous</a></li>
-    					<li class="page-item"><a class="page-link" href="#">1</a></li>
-    					<li class="page-item"><a class="page-link" href="#">2</a></li>
-    					<li class="page-item"><a class="page-link" href="#">3</a></li>
-    					<li class="page-item"><a class="page-link" href="#">Next</a></li>
-  					</ul>
-				</nav>
-				</div>
-        	</div>
-      	</section>
-    </div>
+                        <div class="col-sm-6">
+                          <a href="{{ route('export_report_in_excel') }}" class="btn bg-bnb-blue text-white"><b>Export to Excel</b></a>
+                        </div>
+				<div class="card-body">
+      		<div class="table-responsive">
+	
+			@include('frontend.table', $employees)
+			
+      		</div>
+    	</div>
+  	</div>
 @endsection
